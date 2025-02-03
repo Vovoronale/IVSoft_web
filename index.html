@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Консультанти ДБН – MyGPT від OpenAI</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?architecture,building') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .section-title {
+      margin: 60px 0 40px;
+      text-align: center;
+      font-weight: 700;
+      color: #343a40;
+    }
+    .consultant-card {
+      transition: transform 0.3s ease;
+    }
+    .consultant-card:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      background-color: #343a40;
+      color: #ccc;
+      padding: 30px 0;
+      text-align: center;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Консультанти ДБН</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="#home">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="#consultants">Консультанти</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Про проект</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="container">
+      <h1 class="display-4">Вітаємо на сайті Консультантів ДБН</h1>
+      <p class="lead">Ваші ШІ-консультанти на базі MyGPT від OpenAI для швидкого пошуку відповідей за нормами проектування</p>
+      <a href="#consultants" class="btn btn-primary btn-lg mt-3">Дізнатися більше</a>
+    </div>
+  </header>
+  
+  <!-- Consultants Section -->
+  <section id="consultants" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Наші ШІ Консультанти</h2>
+      <div class="row">
+        <!-- Консультант для ДБН-1 -->
+        <div class="col-md-4">
+          <div class="card consultant-card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Консультант ДБН-1</h5>
+              <p class="card-text">Інтерактивна підтримка для професіоналів та студентів, що працюють з нормами ДБН-1.</p>
+              <a href="consultant_dbn1.html" class="btn btn-outline-primary">Перейти до консультанта</a>
+            </div>
+          </div>
+        </div>
+        <!-- Консультант для ДБН-2 -->
+        <div class="col-md-4">
+          <div class="card consultant-card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Консультант ДБН-2</h5>
+              <p class="card-text">Оптимізуйте пошук відповідей для норм ДБН-2 – зручно для звичайних користувачів та аматорів.</p>
+              <a href="consultant_dbn2.html" class="btn btn-outline-primary">Перейти до консультанта</a>
+            </div>
+          </div>
+        </div>
+        <!-- Консультант для ДБН-3 -->
+        <div class="col-md-4">
+          <div class="card consultant-card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Консультант ДБН-3</h5>
+              <p class="card-text">Ефективна підтримка для професійних будівельників, що вивчають проектні рішення за нормами ДБН-3.</p>
+              <a href="consultant_dbn3.html" class="btn btn-outline-primary">Перейти до консультанта</a>
+            </div>
+          </div>
+        </div>
+        <!-- Можна додати більше консультантів за потребою -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Про проект</h2>
+      <p>Наш сайт створено для того, щоб заощадити ваш час у пошуку відповідей за нормами проектування ДБН. Завдяки інтеграції сучасних технологій ШІ на базі MyGPT від OpenAI, кожен консультант спеціалізується на конкретних нормах, що дозволяє:</p>
+      <ul>
+        <li><strong>Професіоналам</strong> – швидко перевіряти відповідність проектних рішень нормативам;</li>
+        <li><strong>Студентам</strong> – ефективно вивчати норми та будівельні стандарти;</li>
+        <li><strong>Звичайним користувачам</strong> – перевіряти, чи відповідає житло вимогам безпеки;</li>
+        <li><strong>Аматорам та професійним будівельникам</strong> – отримувати консультації щодо проектних рішень.</li>
+      </ul>
+      <p>Мета проекту – зробити доступ до інформації про ДБН зручним, зрозумілим і ефективним для кожного.</p>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Контакти</h2>
+      <p>Якщо у вас виникли запитання або ви маєте пропозиції щодо покращення роботи сайту, зв'яжіться з нами за наступними контактами:</p>
+      <ul class="list-unstyled">
+        <li><strong>Email:</strong> info@dbnconsultants.ua</li>
+        <li><strong>Телефон:</strong> +380 00 000 0000</li>
+      </ul>
+      <form>
+        <div class="form-group">
+          <label for="contactName">Ім'я</label>
+          <input type="text" class="form-control" id="contactName" placeholder="Ваше ім'я">
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" class="form-control" id="contactEmail" placeholder="Ваш email">
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Повідомлення</label>
+          <textarea class="form-control" id="contactMessage" rows="4" placeholder="Ваше повідомлення"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Відправити</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Консультанти ДБН. Всі права захищені.</p>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS та залежності -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
