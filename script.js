@@ -1,53 +1,53 @@
 // Конфігурація розділів: порядок та видимість
 const sectionsConfig = [
   { id: 'assistants', order: 1, visible: true },
-  { id: 'companies', order: 2, visible: true },
-  { id: 'other-projects', order: 3, visible: true },
+  { id: 'companies', order: 2, visible: false },
+  { id: 'other-projects', order: 3, visible: false },
   { id: 'support', order: 4, visible: true },
   { id: 'usage', order: 5, visible: true },
   { id: 'about', order: 6, visible: true },
-  { id: 'contact', order: 7, visible: true }
+  { id: 'contact', order: 7, visible: false }
 ];
 
 // Дані для асистентів із додатковим полем для GA event
 const assistantsData = [
-  {
+    {
     id: 'dbn1',
     title: {
-      uk: "Асистент ДБН-1",
-      en: "DBN-1 Assistant"
+      uk: "ДБН В.2.2-5:2023",
+      en: "DBN B.2.2-5:2023"
     },
     description: {
-      uk: "Інтерактивна підтримка для професіоналів та студентів, що працюють з нормами ДБН-1.",
-      en: "Interactive support for professionals and students working with DBN-1 standards."
+      uk: "ЗАХИСНІ СПОРУДИ ЦИВІЛЬНОГО ЗАХИСТУ",
+      en: "Protective structures of civil defense"
     },
-    link: "assistant_dbn1.html",
+    link: "https://chatgpt.com/g/g-679fe1d48b6c8191a2b9b2dc0e38e431-dbn-v-2-2-5-2023",
     gaEvent: "assistant_dbn1_click"
   },
   {
     id: 'dbn2',
     title: {
-      uk: "Асистент ДБН-2",
-      en: "DBN-2 Assistant"
+      uk: "ДБН В.2.6-31:2021",
+      en: "DBN B.2.6-31:2021"
     },
     description: {
-      uk: "Оптимізуйте пошук відповідей для норм ДБН-2 – зручно для звичайних користувачів та аматорів.",
-      en: "Optimize your search for DBN-2 compliance – perfect for general users and enthusiasts."
+      uk: "ТЕПЛОВА ІЗОЛЯЦІЯ ТА ЕНЕРГОЕФЕКТИВНІСТЬ БУДІВЕЛЬ",
+      en: "Thermal insulation and energy efficiency of buildings"
     },
-    link: "assistant_dbn2.html",
+    link: "https://chatgpt.com/g/g-679f8359022c819185183f9d67dba80e-dbn-v-2-6-31-2021",
     gaEvent: "assistant_dbn2_click"
   },
   {
     id: 'dbn3',
     title: {
-      uk: "Асистент ДБН-3",
-      en: "DBN-3 Assistant"
+      uk: "ДБН В.1.1.7:2016",
+      en: "DBN B.1.1.7:2016"
     },
     description: {
-      uk: "Ефективна підтримка для професійних будівельників, що вивчають проектні рішення за нормами ДБН-3.",
-      en: "Effective support for professional builders studying design solutions under DBN-3."
+      uk: "ПОЖЕЖНА БЕЗПЕКА ОБ’ЄКТІВ БУДІВНИЦТВА",
+      en: "Fire safety of construction objects"
     },
-    link: "assistant_dbn3.html",
+    link: "https://chatgpt.com/g/g-679a43e723088191ba0208ec2f058393-dbn-v-1-1-7-2016",
     gaEvent: "assistant_dbn3_click"
   }
 ];
