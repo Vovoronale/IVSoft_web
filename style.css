@@ -5,6 +5,11 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Запобігаємо перенесенню пунктів меню */
+.navbar-nav {
+  white-space: nowrap;
+}
+
 /* Hero секція */
 .hero {
   position: relative;
@@ -34,12 +39,20 @@ body {
   font-weight: 700;
   color: #343a40;
 }
-.consultant-card, .assistant-card {
+.assistant-card {
   transition: transform 0.3s ease;
 }
 .assistant-card:hover {
   transform: scale(1.03);
 }
+/* Стилізація кнопок підтримки */
+.btn-support {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin: 0.5rem;
+}
+
 footer {
   background-color: #343a40;
   color: #ccc;
@@ -48,4 +61,12 @@ footer {
 }
 .navbar-brand {
   font-weight: bold;
+}
+.social-links a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+.social-links a:hover {
+  text-decoration: underline;
 }
