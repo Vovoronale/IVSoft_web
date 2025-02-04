@@ -3,31 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Назва сайту завжди англійською -->
+  <!-- SEO meta-теги -->
+  <meta name="description" content="DBN Assistant - Ваші ШІ-асистенти для пошуку відповідей за нормами проектування.">
+  <meta name="keywords" content="DBN, Assistant, ШІ, MyGPT, проектування, будівництво, норми">
+  <meta name="robots" content="index, follow">
   <title>DBN Assistant</title>
   <!-- Підключення зовнішніх стилів -->
   <link rel="stylesheet" href="style.css">
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
   <!-- Навігація -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <!-- Назва сайту залишається "DBN Assistant" -->
       <a class="navbar-brand" href="#">DBN Assistant</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="navbarContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="#home" data-i18n="navHome">Головна</a></li>
-          <li class="nav-item"><a class="nav-link" href="#assistants" data-i18n="navAssistants">Асистенти</a></li>
-          <li class="nav-item"><a class="nav-link" href="#companies" data-i18n="navCompanies">Фірми</a></li>
-          <li class="nav-item"><a class="nav-link" href="#other-projects" data-i18n="navOtherProjects">Інші Проекти</a></li>
-          <li class="nav-item"><a class="nav-link" href="#usage" data-i18n="navUsage">Як користуватися асистентами</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="navAbout">Про проект</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="navContact">Контакти</a></li>
+          <!-- Додаємо data-target-section для кожного пункту меню -->
+          <li class="nav-item"><a class="nav-link" href="#home" data-target-section="home" data-i18n="navHome">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="#assistants" data-target-section="assistants" data-i18n="navAssistants">Асистенти</a></li>
+          <li class="nav-item"><a class="nav-link" href="#companies" data-target-section="companies" data-i18n="navCompanies">Партнери</a></li>
+          <li class="nav-item"><a class="nav-link" href="#other-projects" data-target-section="other-projects" data-i18n="navOtherProjects">Інші Проекти</a></li>
+          <li class="nav-item"><a class="nav-link" href="#support" data-target-section="support" data-i18n="navSupport">Підтримати нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="#usage" data-target-section="usage" data-i18n="navUsage">Як користуватися асистентами</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-target-section="about" data-i18n="navAbout">Про проект</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-target-section="contact" data-i18n="navContact">Контакти</a></li>
           <!-- Перемикач мови -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown">
@@ -50,156 +63,183 @@
       <p class="lead" id="heroSubtitle" data-i18n="heroSubtitle">
         Ваші ШІ-асистенти на базі MyGPT від OpenAI для швидкого пошуку відповідей за нормами проектування
       </p>
-      <a href="#assistants" class="btn btn-primary btn-lg mt-3" id="heroButton" data-i18n="heroButton">Дізнатися більше</a>
+      <a href="#assistants" class="btn btn-primary btn-lg mt-3 ga-link" data-ga-event="hero_button_click" data-i18n="heroButton">Дізнатися більше</a>
     </div>
   </header>
   
-  <!-- Секція Асистентів -->
-  <section id="assistants" class="py-5">
-    <div class="container">
-      <h2 class="section-title" id="assistantsTitle" data-i18n="assistantsTitle">Наші ШІ Асистенти</h2>
-      <div class="row" id="assistants-container">
-        <!-- Блоки асистентів формуватимуться динамічно через JavaScript -->
-      </div>
-    </div>
-  </section>
-  
-  <!-- Секція Фірм -->
-  <section id="companies" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title" id="companiesTitle" data-i18n="companiesTitle">Фірми, які користуються нашими послугами</h2>
-      <p id="companiesText" data-i18n="companiesText">
-        Наші послуги використовують провідні фірми в галузі будівництва та проектування.
-      </p>
-      <div class="row">
-        <!-- Приклад представлення фірм -->
-        <div class="col-md-4">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Фірма 1</h5>
-              <p class="card-text">Опис фірми 1.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Фірма 2</h5>
-              <p class="card-text">Опис фірми 2.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Фірма 3</h5>
-              <p class="card-text">Опис фірми 3.</p>
-            </div>
-          </div>
+  <!-- Основний контейнер розділів (для можливості зміни порядку/видимості) -->
+  <main id="sections-container">
+    <!-- Асистенти -->
+    <section id="assistants" class="py-5">
+      <div class="container">
+        <h2 class="section-title" id="assistantsTitle" data-i18n="assistantsTitle">Наші ШІ Асистенти</h2>
+        <div class="row" id="assistants-container">
+          <!-- Динамічно генеруються блоки асистентів -->
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Секція Інших Проектів -->
-  <section id="other-projects" class="py-5">
-    <div class="container">
-      <h2 class="section-title" id="otherProjectsTitle" data-i18n="otherProjectsTitle">Інші Проекти</h2>
-      <p id="otherProjectsText" data-i18n="otherProjectsText">
-        Ознайомтесь з іншими проектами, що допомагають впроваджувати інновації в галузі будівництва.
-      </p>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Проект A</h5>
-              <p class="card-text">Опис проекту A.</p>
-              <a href="#" class="btn btn-outline-primary">Дізнатися більше</a>
+    </section>
+    
+    <!-- Партнери -->
+    <section id="companies" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title" id="companiesTitle" data-i18n="companiesTitle">Партнери, які користуються нашими послугами</h2>
+        <p id="companiesText" data-i18n="companiesText">
+          Наші послуги використовують провідні фірми в галузі будівництва та проектування.
+        </p>
+        <div class="row">
+          <!-- Приклад представлення партнерів -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Партнер 1</h5>
+                <p class="card-text">Опис партнера 1.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Проект B</h5>
-              <p class="card-text">Опис проекту B.</p>
-              <a href="#" class="btn btn-outline-primary">Дізнатися більше</a>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Партнер 2</h5>
+                <p class="card-text">Опис партнера 2.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Проект C</h5>
-              <p class="card-text">Опис проекту C.</p>
-              <a href="#" class="btn btn-outline-primary">Дізнатися більше</a>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Партнер 3</h5>
+                <p class="card-text">Опис партнера 3.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Секція "Як користуватися асистентами" -->
-  <section id="usage" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title" id="usageSectionTitle" data-i18n="usageSectionTitle">Як користуватися асистентами</h2>
-      <!-- Вміст можна задавати в HTML-форматі для більшої гнучкості -->
-      <div id="usageSectionContent"></div>
-    </div>
-  </section>
-  
-  <!-- Секція Про проект -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <h2 class="section-title" id="aboutTitle" data-i18n="aboutTitle">Про проект</h2>
-      <p id="aboutText" data-i18n="aboutText">
-        Наш сайт створено для того, щоб заощадити ваш час у пошуку відповідей за нормами проектування ДБН. Завдяки інтеграції сучасних технологій ШІ на базі MyGPT від OpenAI, кожен асистент спеціалізується на конкретних нормах, що дозволяє:
-      </p>
-      <ul id="aboutList">
-        <li data-i18n="aboutList1"><strong>Професіоналам</strong> – швидко перевіряти відповідність проектних рішень нормативам;</li>
-        <li data-i18n="aboutList2"><strong>Студентам</strong> – ефективно вивчати норми та будівельні стандарти;</li>
-        <li data-i18n="aboutList3"><strong>Звичайним користувачам</strong> – перевіряти, чи відповідає житло вимогам безпеки;</li>
-        <li data-i18n="aboutList4"><strong>Аматорам та професійним будівельникам</strong> – отримувати консультації щодо проектних рішень.</li>
-      </ul>
-      <p id="aboutConclusion" data-i18n="aboutConclusion">
-        Мета проекту – зробити доступ до інформації про ДБН зручним, зрозумілим і ефективним для кожного.
-      </p>
-    </div>
-  </section>
-  
-  <!-- Секція Контактів -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="section-title" id="contactTitle" data-i18n="contactTitle">Контакти</h2>
-      <p id="contactText" data-i18n="contactText">
-        Якщо у вас виникли запитання або ви маєте пропозиції щодо покращення роботи сайту, зв'яжіться з нами за наступними контактами:
-      </p>
-      <ul class="list-unstyled">
-        <li><strong>Email:</strong> info@dbnconsultants.ua</li>
-        <li><strong>Телефон:</strong> +380 00 000 0000</li>
-      </ul>
-      <form>
-        <div class="form-group">
-          <label for="contactName" data-i18n="formName">Ім'я</label>
-          <input type="text" class="form-control" id="contactName" placeholder="" data-i18n-placeholder="formNamePlaceholder">
+    </section>
+    
+    <!-- Інші Проекти -->
+    <section id="other-projects" class="py-5">
+      <div class="container">
+        <h2 class="section-title" id="otherProjectsTitle" data-i18n="otherProjectsTitle">Інші Проекти</h2>
+        <p id="otherProjectsText" data-i18n="otherProjectsText">
+          Ознайомтесь з іншими проектами, що допомагають впроваджувати інновації в галузі будівництва.
+        </p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Проект A</h5>
+                <p class="card-text">Опис проекту A.</p>
+                <a href="#" class="btn btn-outline-primary ga-link" data-ga-event="project_A_click">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Проект B</h5>
+                <p class="card-text">Опис проекту B.</p>
+                <a href="#" class="btn btn-outline-primary ga-link" data-ga-event="project_B_click">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Проект C</h5>
+                <p class="card-text">Опис проекту C.</p>
+                <a href="#" class="btn btn-outline-primary ga-link" data-ga-event="project_C_click">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="contactEmail" data-i18n="formEmail">Email</label>
-          <input type="email" class="form-control" id="contactEmail" placeholder="" data-i18n-placeholder="formEmailPlaceholder">
+      </div>
+    </section>
+    
+    <!-- Підтримати нас (Patreon та Buy Me a Coffee) -->
+    <section id="support" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title" id="supportTitle" data-i18n="supportTitle">Підтримати нас на Patreon</h2>
+        <p id="supportText" data-i18n="supportText">
+          Підтримайте наш проект через підписку на Patreon або купіть мені каву. Це допомагає нам розвивати нові ідеї та вдосконалювати сервіс.
+        </p>
+        <div class="text-center">
+          <a href="https://www.patreon.com/yourpatreon" target="_blank" class="btn btn-danger btn-support ga-link" data-ga-event="patreon_click" data-i18n="patreonButton">Підписатися на Patreon</a>
+          <a href="https://www.buymeacoffee.com/yourbuymeacoffee" target="_blank" class="btn btn-warning btn-support ga-link" data-ga-event="coffee_click" data-i18n="coffeeButton">Купити каву</a>
         </div>
-        <div class="form-group">
-          <label for="contactMessage" data-i18n="formMessage">Повідомлення</label>
-          <textarea class="form-control" id="contactMessage" rows="4" placeholder="" data-i18n-placeholder="formMessagePlaceholder"></textarea>
+      </div>
+    </section>
+    
+    <!-- Як користуватися асистентами -->
+    <section id="usage" class="py-5">
+      <div class="container">
+        <h2 class="section-title" id="usageSectionTitle" data-i18n="usageSectionTitle">Як користуватися асистентами</h2>
+        <div id="usageSectionContent">
+          <!-- HTML-вміст буде вставлено динамічно -->
         </div>
-        <button type="submit" class="btn btn-primary" data-i18n="formButton">Відправити</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
+    
+    <!-- Про проект (з інформацією про автора та посиланням на LinkedIn) -->
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title" id="aboutTitle" data-i18n="aboutTitle">Про проект</h2>
+        <p id="aboutText" data-i18n="aboutText">
+          Наш сайт створено для того, щоб заощадити ваш час у пошуку відповідей за нормами проектування ДБН. Завдяки інтеграції сучасних технологій ШІ на базі MyGPT від OpenAI, кожен асистент спеціалізується на конкретних нормах, що дозволяє:
+        </p>
+        <ul id="aboutList">
+          <li data-i18n="aboutList1"><strong>Професіоналам</strong> – швидко перевіряти відповідність проектних рішень нормативам;</li>
+          <li data-i18n="aboutList2"><strong>Студентам</strong> – ефективно вивчати норми та будівельні стандарти;</li>
+          <li data-i18n="aboutList3"><strong>Звичайним користувачам</strong> – перевіряти, чи відповідає житло вимогам безпеки;</li>
+          <li data-i18n="aboutList4"><strong>Аматорам та професійним будівельникам</strong> – отримувати консультації щодо проектних рішень.</li>
+        </ul>
+        <p id="aboutConclusion" data-i18n="aboutConclusion">
+          Мета проекту – зробити доступ до інформації про ДБН зручним, зрозумілим і ефективним для кожного.
+        </p>
+        <!-- Інформація про автора із посиланням на LinkedIn -->
+        <p id="authorInfo" data-i18n="authorInfo">
+          Автор проекту: [Ім'я Автора]. Детальніше: <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" class="ga-link" data-ga-event="linkedin_click">LinkedIn</a>.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Контакти -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="section-title" id="contactTitle" data-i18n="contactTitle">Контакти</h2>
+        <p id="contactText" data-i18n="contactText">
+          Якщо у вас виникли запитання або ви маєте пропозиції щодо покращення роботи сайту, зв'яжіться з нами за наступними контактами:
+        </p>
+        <ul class="list-unstyled">
+          <li><strong>Email:</strong> info@dbnconsultants.ua</li>
+          <li><strong>Телефон:</strong> +380 00 000 0000</li>
+        </ul>
+        <form>
+          <div class="form-group">
+            <label for="contactName" data-i18n="formName">Ім'я</label>
+            <input type="text" class="form-control" id="contactName" placeholder="" data-i18n-placeholder="formNamePlaceholder">
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" data-i18n="formEmail">Email</label>
+            <input type="email" class="form-control" id="contactEmail" placeholder="" data-i18n-placeholder="formEmailPlaceholder">
+          </div>
+          <div class="form-group">
+            <label for="contactMessage" data-i18n="formMessage">Повідомлення</label>
+            <textarea class="form-control" id="contactMessage" rows="4" placeholder="" data-i18n-placeholder="formMessagePlaceholder"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary ga-link" data-ga-event="contact_form_submit" data-i18n="formButton">Відправити</button>
+        </form>
+      </div>
+    </section>
+  </main>
   
-  <!-- Футер -->
+  <!-- Футер із посиланнями на соцмережі -->
   <footer>
-    <div class="container">
+    <div class="container text-center">
+      <div class="social-links mb-3">
+        <a href="https://www.facebook.com/yourfacebook" target="_blank" class="ga-link" data-ga-event="facebook_click">Facebook</a> |
+        <a href="https://www.patreon.com/yourpatreon" target="_blank" class="ga-link" data-ga-event="patreon_footer_click">Patreon</a> |
+        <a href="https://t.me/yourtelegram" target="_blank" class="ga-link" data-ga-event="telegram_click">Telegram</a>
+      </div>
       <p data-i18n="footerText">© 2025 DBN Assistant. Всі права захищені.</p>
     </div>
   </footer>
