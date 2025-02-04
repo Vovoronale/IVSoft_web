@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Заборонені директорії (за потребою, можна розширити список)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+
+# Розташування файлу sitemap.xml
+Sitemap: https://www.dbnassistant.com/sitemap.xml
