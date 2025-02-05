@@ -11,7 +11,7 @@ const sectionsConfig = [
 
 // Дані для асистентів із додатковим полем для GA event
 const assistantsData = [
-    {
+  {
     id: 'dbn1',
     title: {
       uk: "ДБН В.2.2-5:2023",
@@ -22,7 +22,8 @@ const assistantsData = [
       en: "Protective structures of civil defense"
     },
     link: "https://chatgpt.com/g/g-679fe1d48b6c8191a2b9b2dc0e38e431-dbn-v-2-2-5-2023",
-    gaEvent: "assistant_dbn1_click"
+    gaEvent: "assistant_dbn1_click",
+    logo: "https://via.placeholder.com/50?text=DBN+V.2.2-5" // URL логотипу
   },
   {
     id: 'dbn2',
@@ -35,7 +36,8 @@ const assistantsData = [
       en: "Thermal insulation and energy efficiency of buildings"
     },
     link: "https://chatgpt.com/g/g-679f8359022c819185183f9d67dba80e-dbn-v-2-6-31-2021",
-    gaEvent: "assistant_dbn2_click"
+    gaEvent: "assistant_dbn2_click",
+    logo: "https://via.placeholder.com/50?text=DBN+V.2.6-31"
   },
   {
     id: 'dbn3',
@@ -48,9 +50,11 @@ const assistantsData = [
       en: "Fire safety of construction objects"
     },
     link: "https://chatgpt.com/g/g-679a43e723088191ba0208ec2f058393-dbn-v-1-1-7-2016",
-    gaEvent: "assistant_dbn3_click"
+    gaEvent: "assistant_dbn3_click",
+    logo: "https://via.placeholder.com/50?text=DBN+V.1.1-7"
   }
 ];
+
 
 document.addEventListener('DOMContentLoaded', function() {
   let currentLang = 'uk';
@@ -280,45 +284,52 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Функція для динамічного формування блоків асистентів
-  function renderAssistants() {
-    const container = document.getElementById('assistants-container');
-    container.innerHTML = '';
-    assistantsData.forEach(function(assistant) {
-      const colDiv = document.createElement('div');
-      colDiv.className = 'col-md-4';
-      
-      const cardDiv = document.createElement('div');
-      cardDiv.className = 'card assistant-card mb-4 shadow-sm';
-      
-      const cardBody = document.createElement('div');
-      cardBody.className = 'card-body';
-      
-      const cardTitle = document.createElement('h5');
-      cardTitle.className = 'card-title';
-      cardTitle.innerHTML = assistant.title[currentLang];
-      
-      const cardText = document.createElement('p');
-      cardText.className = 'card-text';
-      cardText.innerHTML = assistant.description[currentLang];
-      
-      const cardLink = document.createElement('a');
-      cardLink.href = assistant.link;
-      cardLink.className = 'btn btn-outline-primary ga-link';
-      // Встановлюємо назву події із даних асистента
-      cardLink.setAttribute('data-ga-event', assistant.gaEvent);
-      cardLink.innerHTML = translations[currentLang]['assistantButton'];
-      cardLink.addEventListener('click', function() {
-        sendAnalyticsEvent('assistant_click', 'Assistants', assistant.gaEvent);
-      });
-      
-      cardBody.appendChild(cardTitle);
-      cardBody.appendChild(cardText);
-      cardBody.appendChild(cardLink);
-      cardDiv.appendChild(cardBody);
-      colDiv.appendChild(cardDiv);
-      container.appendChild(colDiv);
+ function renderAssistants() {
+  const container = document.getElementById('assistants-container');
+  container.innerHTML = '';
+  assistantsData.forEach(function(assistant) {
+    const colDiv = document.createElement('div');
+    colDiv.className = 'col-md-4';
+
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'card assistant-card mb-4 shadow-sm';
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+
+    // Додаємо логотип асистента
+    const logoImg = document.createElement('img');
+    logoImg.src = assistant.logo;
+    logoImg.alt = assistant.title[currentLang] + " logo";
+    logoImg.className = "assistant-logo";
+    cardBody.appendChild(logoImg);
+
+    const cardTitle = document.createElement('h5');
+    cardTitle.className = 'card-title';
+    cardTitle.innerHTML = assistant.title[currentLang];
+
+    const cardText = document.createElement('p');
+    cardText.className = 'card-text';
+    cardText.innerHTML = assistant.description[currentLang];
+
+    const cardLink = document.createElement('a');
+    cardLink.href = assistant.link;
+    cardLink.className = 'btn btn-outline-primary ga-link';
+    cardLink.setAttribute('data-ga-event', assistant.gaEvent);
+    cardLink.innerHTML = translations[currentLang]['assistantButton'];
+    cardLink.addEventListener('click', function() {
+      sendAnalyticsEvent('assistant_click', 'Assistants', assistant.gaEvent);
     });
-  }
+
+    // Додаємо елементи до карточки
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    cardBody.appendChild(cardLink);
+    cardDiv.appendChild(cardBody);
+    colDiv.appendChild(cardDiv);
+    container.appendChild(colDiv);
+  });
+}
   
   // Функція для прикріплення подій GA до всіх посилань та кнопок, які ще не отримали атрибут data-ga-attached
   function attachGlobalGAEvents() {
