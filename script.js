@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       otherProjectsTitle: "Інші Проекти",
       otherProjectsText: "Ознайомтесь з іншими проектами, що допомагають впроваджувати інновації в галузі будівництва.",
       supportTitle: "Підтримати нас на Patreon",
-      supportText: "Підтримайте наш проект через підписку на Patreon або купіть мені каву. Це допомагає нам розвивати нові ідеї та вдосконалювати сервіс.",
+      supportText: "Підтримайте наш проект через підписку на Patreon. Це допомагає нам додавати систенти та вдосконалювати існуючі.",
       patreonButton: "Підписатися на Patreon",
       coffeeButton: "Купити каву",
       usageSectionTitle: "Як користуватися асистентами",
