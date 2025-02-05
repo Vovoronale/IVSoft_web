@@ -11,6 +11,11 @@ body {
 }
 
 /* Hero секція */
+.hero h1,
+.hero h2,
+.hero p {
+  font-weight: 600;
+}
 .hero {
   position: relative;
   color: #fff;
