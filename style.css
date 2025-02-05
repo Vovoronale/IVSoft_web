@@ -22,7 +22,7 @@ body {
   padding: 100px 0;
   text-align: center;
   /* URL зображення можна змінити через JS, за замовчуванням: */
- /* background: url('default-hero.jpg') no-repeat center center;*/
+  background: url('/default-hero.PNG') no-repeat center center;
   background-size: auto;
 }
 .hero::before {
