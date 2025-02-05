@@ -77,3 +77,8 @@ footer {
   margin-bottom: 10px;
   display: block;
 }
+.site-logo {
+  height: 40px; /* Значення можна налаштувати відповідно до висоти вашої навігаційної панелі */
+  width: auto;
+  display: inline-block;
+}
