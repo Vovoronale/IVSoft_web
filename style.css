@@ -23,7 +23,7 @@ body {
   text-align: center;
   /* URL зображення можна змінити через JS, за замовчуванням: */
  /* background: url('default-hero.jpg') no-repeat center center;*/
-  background-size: cover;
+  background-size: auto;
 }
 .hero::before {
   content: "";
