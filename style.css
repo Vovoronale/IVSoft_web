@@ -9,7 +9,11 @@ body {
 .navbar-nav {
   white-space: nowrap;
 }
-
+.hero h1,
+.hero h2,
+.hero p {
+  font-weight: 600;
+}
 /* Hero секція */
 .hero {
   position: relative;
@@ -17,8 +21,9 @@ body {
   padding: 100px 0;
   text-align: center;
   /* URL зображення можна змінити через JS, за замовчуванням: */
- /* background: url('default-hero.jpg') no-repeat center center;*/
-  background-size: cover;
+  background: url('/default-hero.PNG') no-repeat center center;
+  background-size: auto;
+  
 }
 .hero::before {
   content: "";
@@ -69,4 +74,30 @@ footer {
 }
 .social-links a:hover {
   text-decoration: underline;
+}
+.assistant-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+}
+.site-logo {
+  height: 40px; /* Значення можна налаштувати відповідно до висоти вашої навігаційної панелі */
+  width: auto;
+  display: inline-block;
+}
+
+.assistant-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.assistant-logo {
+  width: 40px;
+  height: 40px;
+  filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(180deg);
+  object-fit: contain;
+  margin-right: 15px; /* Простір між логотипом і текстом */
 }
