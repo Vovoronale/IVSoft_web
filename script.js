@@ -372,8 +372,8 @@ document.addEventListener('DOMContentLoaded', function() {
   attachGlobalGAEvents();
   
   // Задаємо фон для hero-секції
-  const heroBackgroundImage = "https://source.unsplash.com/1600x900/?architecture,building";
-  document.querySelector('.hero').style.backgroundImage = `url(${heroBackgroundImage})`;
+ // const heroBackgroundImage = "https://source.unsplash.com/1600x900/?architecture,building";
+//  document.querySelector('.hero').style.backgroundImage = `url(${heroBackgroundImage})`;
   
   // Оновлюємо розташування розділів і меню за конфігурацією
   updateSectionsOrder();
