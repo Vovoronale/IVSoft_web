@@ -101,3 +101,36 @@ footer {
   object-fit: contain;
   margin-right: 15px; /* Простір між логотипом і текстом */
 }
+.card-body.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Блок з текстом буде займати всю доступну ширину */
+.project-text {
+  flex: 1;
+  padding-right: 15px; /* Відступ від зображення */
+}
+
+/* Контейнер для зображення, можна задати фіксовану ширину, якщо потрібно */
+.project-image-container {
+  flex-shrink: 0;
+}
+
+/* Стиль для зображення */
+.project-image {
+  width: 80px;          /* Або бажаний розмір */
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+.project-image {
+  width: 80px;        /* Ширина зображення */
+  height: 80px;       /* Висота зображення */
+  object-fit: contain;/* Зберігає пропорції зображення */
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

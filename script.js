@@ -2,7 +2,7 @@
 const sectionsConfig = [
   { id: 'assistants', order: 1, visible: true },
   { id: 'companies', order: 2, visible: false },
-  { id: 'other-projects', order: 3, visible: false },
+  { id: 'other-projects', order: 3, visible: true },
   { id: 'support', order: 4, visible: true },
   { id: 'usage', order: 5, visible: true },
   { id: 'about', order: 6, visible: true },
