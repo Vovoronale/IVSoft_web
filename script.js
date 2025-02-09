@@ -56,7 +56,7 @@ const assistantsData = [
   {
     id: 'dbn4',
     title: {
-      uk: "ДБН В.2.2-15-2019",
+      uk: "ДБН В.2.2-15:2019",
       en: "DBN B.2.2-15:2019"
     },
     description: {
