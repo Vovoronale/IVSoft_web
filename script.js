@@ -52,6 +52,20 @@ const assistantsData = [
     link: "https://chatgpt.com/g/g-679a43e723088191ba0208ec2f058393-dbn-v-1-1-7-2016",
     gaEvent: "assistant_dbn3_click",
     logo: "/fire-solid.svg"
+  },
+  {
+    id: 'dbn4',
+    title: {
+      uk: "ДБН В.2.2-15-2019",
+      en: "DBN B.2.2-15:2019"
+    },
+    description: {
+      uk: "Житлові будинки. Основні положення",
+      en: "Residential buildings. Main provisions"
+    },
+    link: "https://chatgpt.com/g/g-67a9239a7a28819197664b900dcb30e9-dbn-v-2-2-15-2019",
+    gaEvent: "assistant_dbn4_click",
+    logo: "/building-regular.svg"
   }
 ];
 
