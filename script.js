@@ -67,6 +67,20 @@ const assistantsData = [
     link: "https://chatgpt.com/g/g-67a9239a7a28819197664b900dcb30e9-dbn-v-2-2-15-2019",
     gaEvent: "assistant_dbn4_click",
     logo: "/building-regular.svg"
+  },
+  {
+    id: 'dbn5',
+    title: {
+      uk: "ДБН В.2.5-67:2013",
+      en: "DBN В.2.5-67:2013"
+    },
+    description: {
+      uk: "Опалення, вентиляція та кондиціонування",
+      en: "Heating, ventilation and air conditioning"
+    },
+    link: "https://chatgpt.com/g/g-67bb9c7d29e481919219dfe99e246a96-dbn-v-2-5-67-2013",
+    gaEvent: "assistant_dbn5_click",
+    logo: "/Hvac.svg"
   }
 ];
 
