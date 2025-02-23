@@ -74,14 +74,14 @@ const blogArticles = [
   {
     id: 'article1',
     title: {
-      uk: "Стаття 1: Аналізуємо планування будівель за допомогою ШІ",
-      en: "Article 1: Analysing building layouts using AI"
+      uk: "Аналізуємо планування будівель за допомогою ШІ",
+      en: "Analysing building layouts using AI"
     },
     summary: {
       uk: "Конкуренція на ринку штучного інтелекту відчиняє нові можливості для користувачів. Технології розвиваються так швидко, що з’являються безліч способів застосувати їх у нашій роботі. Проєктувальникам доводиться постійно оцінювати планування, але оцінка якості часто суб’єктивна. Методи які використовують девелопери, хоч більш структуровані, але не завжди враховують повністю функціональні особливості житла. Я переконаний, що ШІ може зробити цікаву оцінку планування, а головне — швидко та об’єктивно.",
       en: "Competition in the AI market opens up new opportunities for users. Technology is developing so fast that there are many ways to apply it to our work. Designers have to constantly evaluate the layout, but the quality assessment is often subjective. The methods used by developers, although more structured, do not always take into account the full functional features of the housing. I am convinced that AI can make an interesting assessment of planning, and most importantly, quickly and objectively."
     },
-    link: "blog/Article_1.html",
+    link: "/blog/Article_1.html",
     gaEvent: "blog_article1_click"
   }
   // Додайте більше статей за потребою
