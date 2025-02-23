@@ -6,7 +6,8 @@ const sectionsConfig = [
   { id: 'support', order: 4, visible: true },
   { id: 'usage', order: 5, visible: true },
   { id: 'about', order: 6, visible: true },
-  { id: 'contact', order: 7, visible: false }
+  { id: 'contact', order: 7, visible: false },
+  { id: 'blog', order: 8, visible: true }  // Додаємо розділ "БЛОГ"
 ];
 
 // Дані для асистентів із додатковим полем для GA event
@@ -69,6 +70,22 @@ const assistantsData = [
   }
 ];
 
+const blogArticles = [
+  {
+    id: 'article1',
+    title: {
+      uk: "Стаття 1: Аналізуємо планування будівель за допомогою ШІ",
+      en: "Article 1: Analysing building layouts using AI"
+    },
+    summary: {
+      uk: "Конкуренція на ринку штучного інтелекту відчиняє нові можливості для користувачів. Технології розвиваються так швидко, що з’являються безліч способів застосувати їх у нашій роботі. Проєктувальникам доводиться постійно оцінювати планування, але оцінка якості часто суб’єктивна. Методи які використовують девелопери, хоч більш структуровані, але не завжди враховують повністю функціональні особливості житла. Я переконаний, що ШІ може зробити цікаву оцінку планування, а головне — швидко та об’єктивно.",
+      en: "Competition in the AI market opens up new opportunities for users. Technology is developing so fast that there are many ways to apply it to our work. Designers have to constantly evaluate the layout, but the quality assessment is often subjective. The methods used by developers, although more structured, do not always take into account the full functional features of the housing. I am convinced that AI can make an interesting assessment of planning, and most importantly, quickly and objectively."
+    },
+    link: "blog\Article_1.html",
+    gaEvent: "blog_article1_click"
+  }
+  // Додайте більше статей за потребою
+];
 
 document.addEventListener('DOMContentLoaded', function() {
   let currentLang = 'uk';
@@ -190,6 +207,9 @@ document.addEventListener('DOMContentLoaded', function() {
       formMessage: "Повідомлення",
       formMessagePlaceholder: "Ваше повідомлення",
       formButton: "Відправити",
+      navBlog: "БЛОГ",
+      blogTitle: "БЛОГ",
+      blogReadMore: "Читати далі",
       footerText: "© 2025 DBN Assistant. Всі права захищені."
     },
     'en': {
@@ -271,6 +291,9 @@ document.addEventListener('DOMContentLoaded', function() {
       formMessage: "Message",
       formMessagePlaceholder: "Your message",
       formButton: "Send",
+      navBlog: "Blog",
+      blogTitle: "Blog",
+      blogReadMore: "Read More",
       footerText: "© 2025 DBN Assistant. All rights reserved."
     }
   };
@@ -295,7 +318,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     renderAssistants();
     document.getElementById('usageSectionContent').innerHTML = translations[currentLang]['usageSectionContent'];
+    // Додаємо генерацію блогу
+    renderBlogArticles();
   }
+  
   
   // Функція для динамічного формування блоків асистентів
 function renderAssistants() {
@@ -359,6 +385,48 @@ function renderAssistants() {
     container.appendChild(colDiv);
   });
 }
+
+// Функція для динамічного формування списку статей блогу
+function renderBlogArticles() {
+  const container = document.getElementById('blog-container');
+  container.innerHTML = ''; // Очищення контейнера
+  blogArticles.forEach(function(article) {
+    const colDiv = document.createElement('div');
+    colDiv.className = 'col-md-4';
+    
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'card mb-4 shadow-sm';
+    
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+    
+    const cardTitle = document.createElement('h5');
+    cardTitle.className = 'card-title';
+    cardTitle.innerHTML = article.title[currentLang];
+    
+    const cardText = document.createElement('p');
+    cardText.className = 'card-text';
+    cardText.innerHTML = article.summary[currentLang];
+    
+    const cardLink = document.createElement('a');
+    cardLink.href = article.link;
+    cardLink.className = 'btn btn-outline-primary ga-link';
+    // Використовуємо переклад для тексту кнопки (або стандартне значення)
+    cardLink.innerHTML = translations[currentLang]['blogReadMore'] || 'Читати далі';
+    cardLink.setAttribute('data-ga-event', article.gaEvent);
+    cardLink.addEventListener('click', function() {
+      sendAnalyticsEvent('blog_article_click', 'Blog', article.gaEvent);
+    });
+    
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    cardBody.appendChild(cardLink);
+    cardDiv.appendChild(cardBody);
+    colDiv.appendChild(cardDiv);
+    container.appendChild(colDiv);
+  });
+}
+
 
   
   // Функція для прикріплення подій GA до всіх посилань та кнопок, які ще не отримали атрибут data-ga-attached
