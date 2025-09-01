@@ -145,3 +145,17 @@ th, td {
   padding: 8px;
   text-align: left;
 }
+
+/* Логотип компанії IVSoft */
+.ivsoft-logo {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Невеликий текст позначення компанії */
+.ivsoft-tag {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
