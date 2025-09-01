@@ -83,7 +83,7 @@ footer {
   display: block;
 }
 .site-logo {
-  height: 40px; /* Значення можна налаштувати відповідно до висоти вашої навігаційної панелі */
+  height: 32px; /* Значення можна налаштувати відповідно до висоти вашої навігаційної панелі */
   width: auto;
   display: inline-block;
 }
@@ -144,4 +144,18 @@ th, td {
   border: 1px solid #ccc; /* Сіра лінія */
   padding: 8px;
   text-align: left;
+}
+
+/* Логотип компанії IVSoft */
+.ivsoft-logo {
+  height: 16px;
+  width: auto;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Невеликий текст позначення компанії */
+.ivsoft-tag {
+  font-size: 0.8rem;
+  margin-left: 5px;
 }
