@@ -58,13 +58,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="nav-item"><a class="nav-link" href="#home" data-target-section="home" data-i18n="navHome">Головна</a></li>
           <li class="nav-item"><a class="nav-link" href="#products" data-target-section="products" data-i18n="navProducts">Продукти</a></li>
           <li class="nav-item"><a class="nav-link" href="#assistants" data-target-section="assistants" data-i18n="navAssistants">Асистенти</a></li>
-          <li class="nav-item"><a class="nav-link" href="#companies" data-target-section="companies" data-i18n="navCompanies">Партнери</a></li>
-          <li class="nav-item"><a class="nav-link" href="#other-projects" data-target-section="other-projects" data-i18n="navOtherProjects">Інші Проекти</a></li>
-          <li class="nav-item"><a class="nav-link" href="#support" data-target-section="support" data-i18n="navSupport">Підтримати нас</a></li>
-          <li class="nav-item"><a class="nav-link" href="#usage" data-target-section="usage" data-i18n="navUsage">Як користуватися асистентами</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about" data-target-section="about" data-i18n="navAbout">Про проект</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact" data-target-section="contact" data-i18n="navContact">Контакти</a></li>
           <li class="nav-item"><a class="nav-link" href="#blog" data-target-section="blog" data-i18n="navBlog">БЛОГ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-target-section="contact" data-i18n="navContact">Контакти</a></li>
           <!-- Перемикач мови -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown">
@@ -95,89 +90,130 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Hero секція -->
   <header id="home" class="hero">
     <div class="container">
-      <h1 class="display-4" id="heroTitle" data-i18n="heroTitle">Вітаємо на сайті DBN Assistant</h1>
-      <p class="lead" id="heroSubtitle" data-i18n="heroSubtitle">
-        Ваші ШІ-асистенти на базі MyGPT від OpenAI для швидкого пошуку відповідей за нормами проектування
-      </p>
-      <a href="#assistants" class="btn btn-primary btn-lg mt-3 ga-link" data-ga-event="hero_button_click" data-i18n="heroButton">Дізнатися більше</a>
-      <a href="#products" class="btn btn-outline-primary btn-lg mt-3 ml-2 ga-link" data-ga-event="hero_products_click" data-i18n="navProducts">Продукти</a>
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-4" id="heroTitle" data-i18n="heroTitle">Вітаємо на сайті DBN Assistant</h1>
+          <p class="lead" id="heroSubtitle" data-i18n="heroSubtitle">
+            Ваші ШІ-асистенти на базі MyGPT від OpenAI для швидкого пошуку відповідей за нормами проектування
+          </p>
+          <div class="d-flex flex-wrap hero-cta">
+            <a href="#assistants" class="btn btn-primary btn-lg mt-3 ga-link" data-ga-event="hero_button_click" data-i18n="heroButton">Дізнатися більше</a>
+            <a href="#products" class="btn btn-outline-primary btn-lg mt-3 ml-lg-2 ga-link" data-ga-event="hero_products_click" data-i18n="navProducts">Продукти</a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <div class="card hero-card">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="capabilitiesTitle">Що ви отримуєте</h5>
+              <ul class="capability-list list-unstyled mb-0">
+                <li data-i18n="capability1">Швидкі відповіді по нормах через спеціалізованих ШІ-асистентів.</li>
+                <li data-i18n="capability2">Теплотехнічні розрахунки та енергоефективність за українськими нормами.</li>
+                <li data-i18n="capability3">Перевірку чинності нормативів у PDF + експорт CSV/JSON.</li>
+                <li data-i18n="capability4">DXF→GeoJSON з прив’язкою до карти для GIS та держсервісів.</li>
+                <li data-i18n="capability5">Розрахунок класу наслідків з журналом дій і звітами PDF/DOCX.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   
   <!-- Основний контейнер розділів (для можливості зміни порядку/видимості) -->
   <main id="sections-container">
+    <!-- Швидка навігація -->
+    <section id="quick-nav" class="py-4">
+      <div class="container">
+        <div class="quick-nav">
+          <div class="quick-nav-title" data-i18n="quickNavTitle">Швидка навігація</div>
+          <div class="quick-nav-links">
+            <a href="#companies" class="quick-nav-link ga-link" data-ga-event="quicknav_companies" data-i18n="navCompanies">Партнери</a>
+            <a href="#other-projects" class="quick-nav-link ga-link" data-ga-event="quicknav_other_projects" data-i18n="navOtherProjects">Інші Проекти</a>
+            <a href="#support" class="quick-nav-link ga-link" data-ga-event="quicknav_support" data-i18n="navSupport">Підтримати нас</a>
+            <a href="#usage" class="quick-nav-link ga-link" data-ga-event="quicknav_usage" data-i18n="navUsage">Як користуватися асистентами</a>
+            <a href="#about" class="quick-nav-link ga-link" data-ga-event="quicknav_about" data-i18n="navAbout">Про проект</a>
+            <a href="/author/" class="quick-nav-link ga-link" data-ga-event="quicknav_author" data-i18n="quickNavAuthor">Автор</a>
+            <a href="/partners/" class="quick-nav-link ga-link" data-ga-event="quicknav_partners_page" data-i18n="quickNavPartnersPage">Партнери (стор.)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Продукти -->
     <section id="products" class="py-5 bg-light">
       <div class="container">
-        <h2 class="section-title" id="productsTitle" data-i18n="productsTitle">Продукти IVSoft</h2>
-        <p id="productsText" data-i18n="productsText">
-          Оберіть продукт під задачу: теплотехніка та енергоефективність, контроль чинності нормативів, конвертація DXF→GeoJSON, розрахунок класу наслідків, DBN Assistant.
-        </p>
-
-        <div class="legal-note mb-4" id="productsLegal" data-i18n="productsLegal">
-          <strong>Юридичний дисклеймер:</strong> результати мають довідковий характер. Перевіряйте результати.
-        </div>
-
         <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">CadEE.pro</h5>
-                <p class="card-text text-muted" data-i18n="productsCadEEText">CadEE.pro — онлайн-сервіс теплотехнічних розрахунків огороджувальних конструкцій та оцінки енергоефективності за українськими нормами. Розвиток через Patreon.</p>
-                <div class="d-flex flex-wrap">
-                  <a href="/products/cadee-pro/" class="btn btn-primary mr-2 mb-2 ga-link" data-ga-event="products_cadee_details_click" data-i18n="ctaLearnMore">Детальніше</a>
-                  <a href="https://cadee.pro" class="btn btn-outline-primary mb-2 ga-link" target="_blank" rel="noopener" data-ga-event="products_cadee_open_click" data-i18n="ctaOpenService">Відкрити сервіс</a>
+          <div class="col-lg-5">
+            <h2 class="section-title" id="productsTitle" data-i18n="productsTitle">Продукти IVSoft</h2>
+            <p id="productsText" data-i18n="productsText">
+              Оберіть продукт під задачу: теплотехніка та енергоефективність, контроль чинності нормативів, конвертація DXF→GeoJSON, розрахунок класу наслідків, DBN Assistant.
+            </p>
+
+            <div class="legal-note mb-4" id="productsLegal" data-i18n="productsLegal">
+              <strong>Юридичний дисклеймер:</strong> результати мають довідковий характер. Перевіряйте результати.
+            </div>
+
+            <a href="/products/" class="btn btn-outline-primary ga-link" data-ga-event="products_all_click" data-i18n="ctaAllProducts">Усі продукти</a>
+          </div>
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">CadEE.pro</h5>
+                    <p class="card-text text-muted" data-i18n="productsCadEEText">CadEE.pro — онлайн-сервіс теплотехнічних розрахунків огороджувальних конструкцій та оцінки енергоефективності за українськими нормами. Розвиток через Patreon.</p>
+                    <div class="d-flex flex-wrap">
+                      <a href="/products/cadee-pro/" class="btn btn-primary mr-2 mb-2 ga-link" data-ga-event="products_cadee_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                      <a href="https://cadee.pro" class="btn btn-outline-primary mb-2 ga-link" target="_blank" rel="noopener" data-ga-event="products_cadee_open_click" data-i18n="ctaOpenService">Відкрити сервіс</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">NormControl</h5>
+                    <p class="card-text text-muted" data-i18n="productsNormControlText">NormControl — перевірка чинності нормативів у PDF → перевірка → експорт CSV/JSON. Тарифи через Patreon (Free/Standard/Pro).</p>
+                    <a href="/products/normcontrol/" class="btn btn-primary ga-link" data-ga-event="products_normcontrol_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">IV GeoJSON</h5>
+                    <p class="card-text text-muted" data-i18n="productsGeoJSONText">IV GeoJSON — DXF→GeoJSON із прив’язкою до карти: контури + опорні точки → коректні координати для GIS/державних сервісів.</p>
+                    <a href="/products/iv-geojson/" class="btn btn-primary ga-link" data-ga-event="products_geojson_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">IVSoft: Розрахунок класу наслідків</h5>
+                    <p class="card-text text-muted" data-i18n="productsConsequenceClassText">IVSoft “Розрахунок класу наслідків” — ДСТУ 8855:2019, покроковий журнал дій, експорт PDF/DOCX.</p>
+                    <a href="/products/consequence-class/" class="btn btn-primary ga-link" data-ga-event="products_consequence_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">DBN Assistant</h5>
+                    <p class="card-text text-muted" data-i18n="productsDBNAssistantText">DBN Assistant — ШІ-асистенти/агенти для аналізу норм на базі MyGPT/OpenAI. Двомовність.</p>
+                    <div class="d-flex flex-wrap">
+                      <a href="/products/dbn-assistant/" class="btn btn-primary mr-2 mb-2 ga-link" data-ga-event="products_dbn_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                      <a href="#assistants" class="btn btn-outline-primary mb-2 ga-link" data-ga-event="products_dbn_to_assistants_click" data-i18n="ctaToAssistants">До асистентів</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">NormControl</h5>
-                <p class="card-text text-muted" data-i18n="productsNormControlText">NormControl — перевірка чинності нормативів у PDF → перевірка → експорт CSV/JSON. Тарифи через Patreon (Free/Standard/Pro).</p>
-                <a href="/products/normcontrol/" class="btn btn-primary ga-link" data-ga-event="products_normcontrol_details_click" data-i18n="ctaLearnMore">Детальніше</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">IV GeoJSON</h5>
-                <p class="card-text text-muted" data-i18n="productsGeoJSONText">IV GeoJSON — DXF→GeoJSON із прив’язкою до карти: контури + опорні точки → коректні координати для GIS/державних сервісів.</p>
-                <a href="/products/iv-geojson/" class="btn btn-primary ga-link" data-ga-event="products_geojson_details_click" data-i18n="ctaLearnMore">Детальніше</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">IVSoft: Розрахунок класу наслідків</h5>
-                <p class="card-text text-muted" data-i18n="productsConsequenceClassText">IVSoft “Розрахунок класу наслідків” — ДСТУ 8855:2019, покроковий журнал дій, експорт PDF/DOCX.</p>
-                <a href="/products/consequence-class/" class="btn btn-primary ga-link" data-ga-event="products_consequence_details_click" data-i18n="ctaLearnMore">Детальніше</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">DBN Assistant</h5>
-                <p class="card-text text-muted" data-i18n="productsDBNAssistantText">DBN Assistant — ШІ-асистенти/агенти для аналізу норм на базі MyGPT/OpenAI. Двомовність.</p>
-                <div class="d-flex flex-wrap">
-                  <a href="/products/dbn-assistant/" class="btn btn-primary mr-2 mb-2 ga-link" data-ga-event="products_dbn_details_click" data-i18n="ctaLearnMore">Детальніше</a>
-                  <a href="#assistants" class="btn btn-outline-primary mb-2 ga-link" data-ga-event="products_dbn_to_assistants_click" data-i18n="ctaToAssistants">До асистентів</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <a href="/products/" class="btn btn-outline-primary ga-link" data-ga-event="products_all_click" data-i18n="ctaAllProducts">Усі продукти</a>
         </div>
       </div>
     </section>
@@ -206,30 +242,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="card-body">
                 <h5 class="card-title">LogiStruct</h5>
                 <p class="card-text">Партнер / компанія (Львів). <a href="https://www.facebook.com/p/Logistruct-100054651480214/" target="_blank" rel="noopener">Facebook</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Партнер 1</h5>
-                <p class="card-text">Опис партнера 1.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Партнер 2</h5>
-                <p class="card-text">Опис партнера 2.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Партнер 3</h5>
-                <p class="card-text">Опис партнера 3.</p>
               </div>
             </div>
           </div>
@@ -332,23 +344,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Про проект (з інформацією про автора та посиланням на LinkedIn) -->
     <section id="about" class="py-5 bg-light">
       <div class="container">
-        <h2 class="section-title" id="aboutTitle" data-i18n="aboutTitle">Про проект</h2>
-        <p id="aboutText" data-i18n="aboutText">
-          Наш сайт створено для того, щоб заощадити ваш час у пошуку відповідей за нормами проектування ДБН. Завдяки інтеграції сучасних технологій ШІ на базі MyGPT від OpenAI, кожен асистент спеціалізується на конкретних нормах, що дозволяє:
-        </p>
-        <ul id="aboutList">
-          <li data-i18n="aboutList1"><strong>Професіоналам</strong> – швидко перевіряти відповідність проектних рішень нормативам;</li>
-          <li data-i18n="aboutList2"><strong>Студентам</strong> – ефективно вивчати норми та будівельні стандарти;</li>
-          <li data-i18n="aboutList3"><strong>Звичайним користувачам</strong> – перевіряти, чи відповідає житло вимогам безпеки;</li>
-          <li data-i18n="aboutList4"><strong>Аматорам та професійним будівельникам</strong> – отримувати консультації щодо проектних рішень.</li>
-        </ul>
-        <p id="aboutConclusion" data-i18n="aboutConclusion">
-          Мета проекту – зробити доступ до інформації про ДБН зручним, зрозумілим і ефективним для кожного.
-        </p>
-        <!-- Інформація про автора із посиланням на LinkedIn -->
-        <p id="authorInfo" data-i18n="authorInfo">
-          Автор проекту: [Ім'я Автора]. Детальніше: <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" class="ga-link" data-ga-event="linkedin_click">LinkedIn</a>.
-        </p>
+        <div class="row">
+          <div class="col-lg-7">
+            <h2 class="section-title" id="aboutTitle" data-i18n="aboutTitle">Про проект</h2>
+            <p id="aboutText" data-i18n="aboutText">
+              Наш сайт створено для того, щоб заощадити ваш час у пошуку відповідей за нормами проектування ДБН. Завдяки інтеграції сучасних технологій ШІ на базі MyGPT від OpenAI, кожен асистент спеціалізується на конкретних нормах, що дозволяє:
+            </p>
+            <ul id="aboutList">
+              <li data-i18n="aboutList1"><strong>Професіоналам</strong> – швидко перевіряти відповідність проектних рішень нормативам;</li>
+              <li data-i18n="aboutList2"><strong>Студентам</strong> – ефективно вивчати норми та будівельні стандарти;</li>
+              <li data-i18n="aboutList3"><strong>Звичайним користувачам</strong> – перевіряти, чи відповідає житло вимогам безпеки;</li>
+              <li data-i18n="aboutList4"><strong>Аматорам та професійним будівельникам</strong> – отримувати консультації щодо проектних рішень.</li>
+            </ul>
+            <p id="aboutConclusion" data-i18n="aboutConclusion">
+              Мета проекту – зробити доступ до інформації про ДБН зручним, зрозумілим і ефективним для кожного.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="card mt-3 mt-lg-5">
+              <div class="card-body">
+                <h5 class="card-title" data-i18n="authorCardTitle">Автор проекту</h5>
+                <!-- Інформація про автора із посиланням на LinkedIn -->
+                <p id="authorInfo" data-i18n="authorInfo">
+                  Автор проекту: [Ім'я Автора]. Детальніше: <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" class="ga-link" data-ga-event="linkedin_click">LinkedIn</a>.
+                </p>
+                <a href="/author/" class="btn btn-outline-primary ga-link" data-ga-event="author_page_button" data-i18n="ctaAuthorPage">Сторінка автора</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -365,29 +389,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Контакти -->
     <section id="contact" class="py-5">
       <div class="container">
-        <h2 class="section-title" id="contactTitle" data-i18n="contactTitle">Контакти</h2>
-        <p id="contactText" data-i18n="contactText">
-          Якщо у вас виникли запитання або ви маєте пропозиції щодо покращення роботи сайту, зв'яжіться з нами за наступними контактами:
-        </p>
-        <ul class="list-unstyled">
-          <li><strong>Email:</strong> info@dbnconsultants.ua</li>
-          <li><strong>Телефон:</strong> +380 00 000 0000</li>
-        </ul>
-        <form>
-          <div class="form-group">
-            <label for="contactName" data-i18n="formName">Ім'я</label>
-            <input type="text" class="form-control" id="contactName" placeholder="" data-i18n-placeholder="formNamePlaceholder">
+        <div class="row">
+          <div class="col-lg-5">
+            <h2 class="section-title" id="contactTitle" data-i18n="contactTitle">Контакти</h2>
+            <p id="contactText" data-i18n="contactText">
+              Якщо у вас виникли запитання або ви маєте пропозиції щодо покращення роботи сайту, зв'яжіться з нами за наступними контактами:
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Email:</strong> info@dbnconsultants.ua</li>
+              <li><strong>Телефон:</strong> +380 00 000 0000</li>
+            </ul>
           </div>
-          <div class="form-group">
-            <label for="contactEmail" data-i18n="formEmail">Email</label>
-            <input type="email" class="form-control" id="contactEmail" placeholder="" data-i18n-placeholder="formEmailPlaceholder">
+          <div class="col-lg-7">
+            <form>
+              <div class="form-group">
+                <label for="contactName" data-i18n="formName">Ім'я</label>
+                <input type="text" class="form-control" id="contactName" placeholder="" data-i18n-placeholder="formNamePlaceholder">
+              </div>
+              <div class="form-group">
+                <label for="contactEmail" data-i18n="formEmail">Email</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="" data-i18n-placeholder="formEmailPlaceholder">
+              </div>
+              <div class="form-group">
+                <label for="contactMessage" data-i18n="formMessage">Повідомлення</label>
+                <textarea class="form-control" id="contactMessage" rows="4" placeholder="" data-i18n-placeholder="formMessagePlaceholder"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary ga-link" data-ga-event="contact_form_submit" data-i18n="formButton">Відправити</button>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="contactMessage" data-i18n="formMessage">Повідомлення</label>
-            <textarea class="form-control" id="contactMessage" rows="4" placeholder="" data-i18n-placeholder="formMessagePlaceholder"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary ga-link" data-ga-event="contact_form_submit" data-i18n="formButton">Відправити</button>
-        </form>
+        </div>
       </div>
     </section>
   </main>

@@ -17,8 +17,8 @@
   --accent: #14b8a6;
   --accent-soft: rgba(14, 165, 233, 0.12);
 
-  --nav-bg: rgba(255, 255, 255, 0.82);
-  --nav-border: rgba(15, 23, 42, 0.08);
+  --nav-bg: rgba(255, 255, 255, 0.96);
+  --nav-border: rgba(15, 23, 42, 0.12);
 
   --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.08);
   --shadow-md: 0 24px 60px rgba(15, 23, 42, 0.14);
@@ -45,8 +45,8 @@ html[data-theme="dark"] {
   --accent: #22d3ee;
   --accent-soft: rgba(56, 189, 248, 0.16);
 
-  --nav-bg: rgba(10, 15, 29, 0.86);
-  --nav-border: rgba(148, 163, 184, 0.18);
+  --nav-bg: rgba(10, 15, 29, 0.94);
+  --nav-border: rgba(148, 163, 184, 0.22);
 
   --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 30px 60px rgba(0, 0, 0, 0.45);
@@ -131,6 +131,7 @@ main {
   border-bottom: 1px solid var(--nav-border);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(14px);
+  background-color: var(--nav-bg);
 }
 
 .navbar-nav {
@@ -146,6 +147,7 @@ main {
   font-weight: 600;
   padding: 0.5rem 0.8rem;
   position: relative;
+  opacity: 1;
 }
 
 .navbar-dark .nav-link::after {
@@ -322,6 +324,46 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   box-shadow: var(--shadow-md);
 }
 
+.hero-cta {
+  gap: 0.75rem;
+}
+
+.hero-card {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: #ffffff;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(12px);
+}
+
+.hero-card .card-title {
+  color: #ffffff;
+}
+
+.hero-card .card-text,
+.hero-card li {
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.capability-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.capability-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
 @media (max-width: 768px) {
   .hero {
     text-align: center;
@@ -330,6 +372,10 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   .hero .lead {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hero-card {
+    text-align: left;
   }
 }
 
@@ -351,6 +397,50 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
+/* Quick nav */
+.quick-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.quick-nav-title {
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.quick-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.quick-nav-link {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.quick-nav-link:hover {
+  border-color: var(--primary);
+  background: var(--accent-soft);
+  color: var(--text);
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .section-title {
     text-align: center;
@@ -359,6 +449,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   .section-title::after {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .quick-nav {
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -564,12 +659,13 @@ footer {
 
 /* Legal note */
 .legal-note {
-  border: 1px solid var(--border);
-  background: var(--accent-soft);
+  border: 1px dashed var(--border);
+  background: transparent;
   color: var(--muted);
   border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  border-left: 3px solid var(--accent);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  opacity: 0.75;
 }
 
 /* Staggered reveal */
@@ -634,4 +730,3 @@ footer {
     transform: none;
   }
 }
-
