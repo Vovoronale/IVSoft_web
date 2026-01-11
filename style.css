@@ -17,7 +17,7 @@
   --accent: #14b8a6;
   --accent-soft: rgba(14, 165, 233, 0.12);
 
-  --nav-bg: rgba(255, 255, 255, 0.96);
+  --nav-bg: #ffffff;
   --nav-border: rgba(15, 23, 42, 0.12);
 
   --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.08);
@@ -31,10 +31,10 @@
 html[data-theme="dark"] {
   color-scheme: dark;
 
-  --bg: #0a0f1d;
+  --bg: #0b111f;
   --surface: #0f172a;
-  --surface-2: #111c2e;
-  --surface-3: #14223a;
+  --surface-2: #0e1626;
+  --surface-3: #111c2e;
   --text: #e2e8f0;
   --muted: #94a3b8;
   --border: rgba(148, 163, 184, 0.2);
@@ -45,7 +45,7 @@ html[data-theme="dark"] {
   --accent: #22d3ee;
   --accent-soft: rgba(56, 189, 248, 0.16);
 
-  --nav-bg: rgba(10, 15, 29, 0.94);
+  --nav-bg: #0a0f1d;
   --nav-border: rgba(148, 163, 184, 0.22);
 
   --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.35);
@@ -113,6 +113,14 @@ main {
 }
 
 .bg-dark {
+  background-color: var(--nav-bg) !important;
+}
+
+html[data-theme="dark"] .bg-light {
+  background-color: var(--bg) !important;
+}
+
+html[data-theme="dark"] .bg-dark {
   background-color: var(--nav-bg) !important;
 }
 
