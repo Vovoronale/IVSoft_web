@@ -2,73 +2,121 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.dbnassistant.com/</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.dbnassistant.com/products</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/products/cadee-pro</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/products/normcontrol</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/products/iv-geojson</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/products/consequence-class</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/products/dbn-assistant</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/author</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.dbnassistant.com/partners</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://www.dbnassistant.com/assistants</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/companies</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/other-projects</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/support</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/usage</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/about</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/contact</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
     <url>
     <loc>https://www.dbnassistant.com/blog</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
     <url>
     <loc>https://www.dbnassistant.com/blog/Article_1.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/privacy</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.dbnassistant.com/terms</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

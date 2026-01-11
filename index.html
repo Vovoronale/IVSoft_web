@@ -10,6 +10,8 @@
   <title>DBN Assistant</title>
   <!-- Підключення зовнішніх стилів -->
   <link rel="stylesheet" href="style.css">
+  <!-- Раннє застосування теми (light/dark) -->
+  <script src="site.js"></script>
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
@@ -54,6 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="navbar-nav ml-auto">
           <!-- Додаємо data-target-section для кожного пункту меню -->
           <li class="nav-item"><a class="nav-link" href="#home" data-target-section="home" data-i18n="navHome">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products" data-target-section="products" data-i18n="navProducts">Продукти</a></li>
           <li class="nav-item"><a class="nav-link" href="#assistants" data-target-section="assistants" data-i18n="navAssistants">Асистенти</a></li>
           <li class="nav-item"><a class="nav-link" href="#companies" data-target-section="companies" data-i18n="navCompanies">Партнери</a></li>
           <li class="nav-item"><a class="nav-link" href="#other-projects" data-target-section="other-projects" data-i18n="navOtherProjects">Інші Проекти</a></li>
@@ -72,6 +75,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a class="dropdown-item language-switch" href="#" data-lang="en">English</a>
             </div>
           </li>
+          <!-- Перемикач теми -->
+          <li class="nav-item ml-lg-2 d-flex align-items-center">
+            <button type="button" class="theme-toggle ga-link" data-theme-toggle aria-label="Перемкнути тему" aria-pressed="false" data-ga-event="theme_toggle_click">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 13.2a8 8 0 0 1-10.2-10A8.5 8.5 0 1 0 21 13.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -85,11 +100,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Ваші ШІ-асистенти на базі MyGPT від OpenAI для швидкого пошуку відповідей за нормами проектування
       </p>
       <a href="#assistants" class="btn btn-primary btn-lg mt-3 ga-link" data-ga-event="hero_button_click" data-i18n="heroButton">Дізнатися більше</a>
+      <a href="#products" class="btn btn-outline-primary btn-lg mt-3 ml-2 ga-link" data-ga-event="hero_products_click" data-i18n="navProducts">Продукти</a>
     </div>
   </header>
   
   <!-- Основний контейнер розділів (для можливості зміни порядку/видимості) -->
   <main id="sections-container">
+    <!-- Продукти -->
+    <section id="products" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title" id="productsTitle" data-i18n="productsTitle">Продукти IVSoft</h2>
+        <p id="productsText" data-i18n="productsText">
+          Оберіть продукт під задачу: теплотехніка та енергоефективність, контроль чинності нормативів, конвертація DXF→GeoJSON, розрахунок класу наслідків, DBN Assistant.
+        </p>
+
+        <div class="legal-note mb-4" id="productsLegal" data-i18n="productsLegal">
+          <strong>Юридичний дисклеймер:</strong> результати мають довідковий характер. Перевіряйте результати.
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">CadEE.pro</h5>
+                <p class="card-text text-muted" data-i18n="productsCadEEText">CadEE.pro — онлайн-сервіс теплотехнічних розрахунків огороджувальних конструкцій та оцінки енергоефективності за українськими нормами. Розвиток через Patreon.</p>
+                <div class="d-flex flex-wrap">
+                  <a href="/products/cadee-pro/" class="btn btn-primary mr-2 mb-2 ga-link" data-ga-event="products_cadee_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                  <a href="https://cadee.pro" class="btn btn-outline-primary mb-2 ga-link" target="_blank" rel="noopener" data-ga-event="products_cadee_open_click" data-i18n="ctaOpenService">Відкрити сервіс</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">NormControl</h5>
+                <p class="card-text text-muted" data-i18n="productsNormControlText">NormControl — перевірка чинності нормативів у PDF → перевірка → експорт CSV/JSON. Тарифи через Patreon (Free/Standard/Pro).</p>
+                <a href="/products/normcontrol/" class="btn btn-primary ga-link" data-ga-event="products_normcontrol_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">IV GeoJSON</h5>
+                <p class="card-text text-muted" data-i18n="productsGeoJSONText">IV GeoJSON — DXF→GeoJSON із прив’язкою до карти: контури + опорні точки → коректні координати для GIS/державних сервісів.</p>
+                <a href="/products/iv-geojson/" class="btn btn-primary ga-link" data-ga-event="products_geojson_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">IVSoft: Розрахунок класу наслідків</h5>
+                <p class="card-text text-muted" data-i18n="productsConsequenceClassText">IVSoft “Розрахунок класу наслідків” — ДСТУ 8855:2019, покроковий журнал дій, експорт PDF/DOCX.</p>
+                <a href="/products/consequence-class/" class="btn btn-primary ga-link" data-ga-event="products_consequence_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">DBN Assistant</h5>
+                <p class="card-text text-muted" data-i18n="productsDBNAssistantText">DBN Assistant — ШІ-асистенти/агенти для аналізу норм на базі MyGPT/OpenAI. Двомовність.</p>
+                <div class="d-flex flex-wrap">
+                  <a href="/products/dbn-assistant/" class="btn btn-primary mr-2 mb-2 ga-link" data-ga-event="products_dbn_details_click" data-i18n="ctaLearnMore">Детальніше</a>
+                  <a href="#assistants" class="btn btn-outline-primary mb-2 ga-link" data-ga-event="products_dbn_to_assistants_click" data-i18n="ctaToAssistants">До асистентів</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/products/" class="btn btn-outline-primary ga-link" data-ga-event="products_all_click" data-i18n="ctaAllProducts">Усі продукти</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Асистенти -->
     <section id="assistants" class="py-5">
       <div class="container">
@@ -109,6 +201,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
         <div class="row">
           <!-- Приклад представлення партнерів -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">LogiStruct</h5>
+                <p class="card-text">Партнер / компанія (Львів). <a href="https://www.facebook.com/p/Logistruct-100054651480214/" target="_blank" rel="noopener">Facebook</a></p>
+              </div>
+            </div>
+          </div>
           <div class="col-md-4">
             <div class="card mb-3">
               <div class="card-body">
@@ -133,6 +233,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="/partners/" class="btn btn-outline-primary ga-link" data-ga-event="partners_page_click" data-i18n="ctaPartnersPage">Сторінка партнерів</a>
         </div>
       </div>
     </section>

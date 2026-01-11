@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NormControl — вебсервіс перевірки чинності нормативів у PDF з експортом CSV/JSON та підписками через Patreon.">
+  <meta name="robots" content="index, follow">
+  <title>NormControl — IVSoft</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/site.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/img/Logo.svg" alt="Логотип сайту" class="site-logo"> DBN Assistant <span class="ivsoft-tag">від IVSoft</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNormControl">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNormControl" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="/products/">Продукти</a></li>
+          <li class="nav-item"><a class="nav-link" href="/author/">Автор</a></li>
+          <li class="nav-item"><a class="nav-link" href="/partners/">Партнери</a></li>
+          <li class="nav-item d-flex align-items-center ml-lg-2">
+            <button type="button" class="theme-toggle ga-link" data-theme-toggle aria-label="Перемкнути тему" aria-pressed="false" data-ga-event="theme_toggle_click">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 13.2a8 8 0 0 1-10.2-10A8.5 8.5 0 1 0 21 13.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <a href="/products/" class="text-muted">&larr; Назад до продуктів</a>
+    <h1 class="mt-3 mb-2">NormControl</h1>
+    <p class="lead text-muted">Вебсервіс автоматизованої перевірки чинності нормативів у проєктній документації.</p>
+
+    <div class="row">
+      <div class="col-lg-9">
+        <h2 class="h4 mt-4">Робочий сценарій</h2>
+        <ol>
+          <li><strong>Завантаження PDF</strong> з проєктною документацією або витягами з посиланнями на нормативи.</li>
+          <li><strong>Перевірка</strong> чинності/актуальності згаданих нормативів.</li>
+          <li><strong>Експорт результатів</strong> у CSV/JSON для подальшої обробки.</li>
+        </ol>
+
+        <h2 class="h4 mt-4">Статуси в результатах</h2>
+        <ul>
+          <li><strong>Чинний</strong> — норматив актуальний на момент перевірки.</li>
+          <li><strong>Втратив чинність / скасований</strong> — потребує заміни або уточнення.</li>
+          <li><strong>Замінено</strong> — є вказівка на новий документ/редакцію.</li>
+          <li><strong>Не ідентифіковано</strong> — документ у PDF розпізнано неоднозначно і потребує ручної перевірки.</li>
+        </ul>
+
+        <h2 class="h4 mt-4">Підписки та тарифи (Patreon)</h2>
+        <p>Підписки оформлюються через Patreon. Доступні рівні: <strong>Free</strong>, <strong>Standard</strong>, <strong>Pro</strong>.</p>
+        <p>Для підписників <strong>CadEE.pro Standard</strong> включено.</p>
+
+        <div class="d-flex flex-wrap mt-3">
+          <a class="btn btn-primary mr-2 mb-2" href="https://patreon.com/user?u=93873537&utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" rel="noopener">Підписки на Patreon</a>
+          <a class="btn btn-outline-primary mb-2" href="/#support">Підтримати</a>
+        </div>
+
+        <div class="legal-note mt-4">
+          <strong>Юридичний дисклеймер:</strong> результати мають довідковий характер. Перевіряйте результати перед використанням у проєктній документації та/або подачею в експертизу.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container text-center">
+      <div class="social-links mb-3">
+        <a href="https://www.facebook.com/iv.mybox" target="_blank" rel="noopener">Facebook</a> |
+        <a href="https://patreon.com/user?u=93873537&utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" rel="noopener">Patreon</a>
+      </div>
+      <div class="policy-links mb-3">
+        <a href="/privacy/">Політика конфіденційності</a> |
+        <a href="/terms/">Умови використання</a>
+      </div>
+      <p>© 2025 DBN Assistant. Всі права захищені. Від компанії IVSoft <img src="/img/Logo.svg" alt="IVSoft логотип" class="ivsoft-logo"></p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
