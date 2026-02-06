@@ -258,6 +258,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
+  // Refresh reveal state for dynamically rendered containers
+  function refreshReveal() {
+    var staggerEls = document.querySelectorAll('.reveal-stagger');
+    staggerEls.forEach(function(el) {
+      // If already in viewport, re-add revealed class
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('revealed');
+      }
+    });
+  }
+
   // Функція для оновлення текстових елементів (з підтримкою HTML)
   function updateTexts() {
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -278,6 +290,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     renderAssistants();
     renderBlogArticles();
+    // Re-trigger reveal for dynamically rendered containers
+    refreshReveal();
   }
 
 
@@ -287,7 +301,7 @@ function renderAssistants() {
   container.innerHTML = '';
   assistantsData.forEach(function(assistant) {
     const colDiv = document.createElement('div');
-    colDiv.className = 'col-md-4';
+    colDiv.className = 'masonry-item';
 
     const cardDiv = document.createElement('div');
     cardDiv.className = 'card assistant-card mb-4 shadow-sm';
@@ -423,4 +437,38 @@ function renderBlogArticles() {
   updateSectionsOrder();
   // Завантаження текстів та контенту
   updateTexts();
+
+  // Scroll reveal via IntersectionObserver
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const revealObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { revealObs.observe(el); });
+  } else {
+    // Fallback: show everything immediately
+    revealEls.forEach(function(el) { el.classList.add('revealed'); });
+  }
+
+  // Card glow effect — track mouse position (throttled via rAF)
+  var glowRAF = null;
+  document.addEventListener('mousemove', function(e) {
+    if (glowRAF) return;
+    glowRAF = requestAnimationFrame(function() {
+      var cards = document.querySelectorAll('.card:hover');
+      cards.forEach(function(card) {
+        var rect = card.getBoundingClientRect();
+        var x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+        var y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+        card.style.setProperty('--mouse-x', x + '%');
+        card.style.setProperty('--mouse-y', y + '%');
+      });
+      glowRAF = null;
+    });
+  });
 });
