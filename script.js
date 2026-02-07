@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Об'єкт з перекладами
   const translations = {
     'uk': {
-      pageTitle: "Володимир Іванейко — інженер та розробник",
+      pageTitle: "IVSoft від Ivaneiko Volodymyr",
       navHome: "Головна",
       navAbout: "Про мене",
       navProducts: "Продукти",
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
       footerText: "Усі права захищені."
     },
     'en': {
-      pageTitle: "Volodymyr Ivaneiko — Engineer & Developer",
+      pageTitle: "IVSoft by Ivaneiko Volodymyr",
       navHome: "Home",
       navAbout: "About",
       navProducts: "Products",
