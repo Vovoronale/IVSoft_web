@@ -47,34 +47,118 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <a href="/products/" class="text-muted">&larr; Назад до продуктів</a>
-    <h1 class="mt-3 mb-2">IV GeoJSON</h1>
-    <p class="lead text-muted">DXF → GeoJSON із прив’язкою до карти для GIS/державних сервісів.</p>
-
-    <div class="row">
-      <div class="col-lg-9">
-        <h2 class="h4 mt-4">Для чого</h2>
-        <p>У кресленнях DXF часто немає точних координат, а підготовка правильного GeoJSON “вручну” займає багато часу. Це особливо відчутно, коли потрібно сформувати дані для GIS та державних сервісів (зокрема для форматів GeoJSON для ЄДСББ).</p>
-
-        <h2 class="h4 mt-4">Як це працює (кроки 1–4)</h2>
-        <ol>
-          <li><strong>Завантажте DXF</strong> із контуром/ділянкою/об’єктом.</li>
-          <li><strong>Оберіть замкнені контури</strong> (полілінії), які потрібно конвертувати.</li>
-          <li><strong>Задайте опорні точки</strong> на кресленні та на карті для прив’язки.</li>
-          <li><strong>Отримайте GeoJSON</strong> з коректними координатами для подачі в GIS/державні сервіси.</li>
-        </ol>
-
-        <div class="d-flex flex-wrap mt-3">
-          <a class="btn btn-primary mr-2 mb-2" href="https://gj.dbnassistant.com/" target="_blank" rel="noopener">Відкрити сервіс</a>
-          <a class="btn btn-outline-primary mb-2" href="mailto:info@dbnconsultants.ua?subject=IV%20GeoJSON">Написати на email</a>
+  <main class="product-detail-page">
+    <section class="product-hero">
+      <div class="container">
+        <a href="/products/" class="product-back">&larr; Назад до продуктів</a>
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <p class="product-kicker">IV GeoJSON</p>
+            <h1 class="product-title">Конвертація DXF у GeoJSON з геоприв'язкою до карти</h1>
+            <p class="product-lead">Інструмент для підготовки коректних GeoJSON-даних із креслень DXF для подальшого використання у GIS та державних сервісах.</p>
+            <div class="product-actions">
+              <a class="btn btn-primary mr-2 mb-2" href="https://gj.dbnassistant.com/" target="_blank" rel="noopener">Відкрити сервіс</a>
+              <a class="btn btn-outline-primary mb-2" href="mailto:info@dbnconsultants.ua?subject=IV%20GeoJSON">Написати на email</a>
+            </div>
+          </div>
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <article class="product-highlight-card">
+              <h2 class="h5 mb-3">Практичний результат</h2>
+              <ul class="product-checklist">
+                <li>Конвертація геометрії з DXF у формат GeoJSON.</li>
+                <li>Прив'язка креслення до картографічної основи.</li>
+                <li>Підготовка даних для подальшої передачі у GIS-контури.</li>
+              </ul>
+            </article>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <section class="product-section">
+      <div class="container">
+        <div class="product-section-header">
+          <h2 class="product-section-title">Коли це корисно</h2>
+          <p class="text-muted mb-0">Сервіс закриває задачі, де вихідні DXF-дані не містять готових координат і потрібна формалізована підготовка GeoJSON без надлишкових ручних операцій.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <article class="product-feature-card">
+              <h3 class="h5">Підготовка до GIS</h3>
+              <p class="text-muted mb-0">Структурування геометрії в форматі, придатному для подальшої системної обробки.</p>
+            </article>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <article class="product-feature-card">
+              <h3 class="h5">Контури та опорні точки</h3>
+              <p class="text-muted mb-0">Налаштування замкнених поліліній і контроль геоприв'язки за опорними точками.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="product-feature-card">
+              <h3 class="h5">Державні сервіси</h3>
+              <p class="text-muted mb-0">Підготовка результатів для задач, де потрібні коректні геодані у стандартизованому форматі.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section-alt">
+      <div class="container">
+        <div class="product-section-header">
+          <h2 class="product-section-title">Послідовність роботи</h2>
+          <p class="text-muted mb-0">Базовий сценарій складається з чотирьох етапів від завантаження DXF до фінального GeoJSON.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+            <article class="product-step-card">
+              <span class="product-step-index">01</span>
+              <h3 class="h5">Завантаження DXF</h3>
+              <p class="text-muted mb-0">Додаєте файл із контуром ділянки або об'єкта.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+            <article class="product-step-card">
+              <span class="product-step-index">02</span>
+              <h3 class="h5">Вибір контурів</h3>
+              <p class="text-muted mb-0">Позначаєте замкнені полілінії, які потрібно конвертувати.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+            <article class="product-step-card">
+              <span class="product-step-index">03</span>
+              <h3 class="h5">Опорні точки</h3>
+              <p class="text-muted mb-0">Визначаєте відповідні точки на кресленні та карті для геоприв'язки.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="product-step-card">
+              <span class="product-step-index">04</span>
+              <h3 class="h5">Експорт GeoJSON</h3>
+              <p class="text-muted mb-0">Отримуєте файл із координатами для подальшого використання.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-cta">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="product-cta-title">Підготуйте геодані з DXF у керованому процесі</h2>
+            <p class="text-muted mb-0">IV GeoJSON допомагає перевести креслення у формат, придатний для цифрових сервісів і командної роботи.</p>
+          </div>
+          <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+            <a class="btn btn-primary" href="https://gj.dbnassistant.com/" target="_blank" rel="noopener">Перейти до сервісу</a>
+          </div>
+        </div>
         <div class="legal-note mt-4">
           <strong>Юридичний дисклеймер:</strong> результати мають довідковий характер. Перевіряйте результати перед використанням у проєктній документації та/або подачею в державні сервіси.
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>

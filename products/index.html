@@ -48,93 +48,102 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <header class="mb-4">
-      <h1 class="mb-2">Мої продукти</h1>
-      <p class="text-muted mb-0">Інженерні SaaS-сервіси та інструменти для проєктування, перевірки нормативів і підготовки результатів для практичного використання.</p>
-    </header>
+  <main class="products-page">
+    <section class="products-hero">
+      <div class="container">
+        <p class="products-kicker">IVSoft Products</p>
+        <h1 class="products-title">Інженерні SaaS-сервіси для проєктування, перевірки нормативів і підготовки звітів</h1>
+        <p class="products-lead">Портфель продуктів орієнтований на практичні задачі: від теплотехнічних розрахунків і перевірки чинності нормативів до підготовки даних для GIS та підтримки фахівців ШІ-асистентами.</p>
+        <div class="legal-note products-legal-note mb-0">
+          <strong>Юридичний дисклеймер:</strong> результати сервісів мають довідковий характер. Перевіряйте результати перед використанням у проєктній документації та/або подачею в експертизу.
+        </div>
+      </div>
+    </section>
 
-    <div class="legal-note mb-4">
-      <strong>Юридичний дисклеймер:</strong> результати сервісів мають довідковий характер. Перевіряйте результати перед використанням у проєктній документації та/або подачею в експертизу.
-    </div>
+    <section class="products-catalog">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">Енергоефективність</p>
+              <h2 class="products-card-title">CadEE.pro</h2>
+              <p class="products-card-text">Теплотехнічні розрахунки огороджувальних конструкцій та оцінка енергоефективності за українськими нормами.</p>
+              <div class="products-card-actions d-flex flex-wrap">
+                <a class="btn btn-primary mr-2 mb-2" href="/products/cadee-pro/">Детальніше</a>
+                <a class="btn btn-outline-primary mb-2" href="https://cadee.pro" target="_blank" rel="noopener">Відкрити сервіс</a>
+              </div>
+            </article>
+          </div>
 
-    <div class="row">
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">CadEE.pro</h5>
-            <p class="card-text text-muted">Теплотехнічні розрахунки огороджувальних конструкцій та оцінка енергоефективності за українськими нормами.</p>
-            <div class="d-flex flex-wrap">
-              <a class="btn btn-primary mr-2 mb-2" href="/products/cadee-pro/">Детальніше</a>
-              <a class="btn btn-outline-primary mb-2" href="https://cadee.pro" target="_blank" rel="noopener">Відкрити сервіс</a>
-            </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">Нормативний контроль</p>
+              <h2 class="products-card-title">NormControl</h2>
+              <p class="products-card-text">Перевірка чинності нормативів у PDF з експортом результатів у CSV/JSON та тарифами через Patreon.</p>
+              <div class="products-card-actions">
+                <a class="btn btn-primary mb-2" href="/products/normcontrol/">Детальніше</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">GIS</p>
+              <h2 class="products-card-title">IV GeoJSON</h2>
+              <p class="products-card-text">Конвертація DXF у GeoJSON з прив'язкою до карти для GIS і державних сервісів.</p>
+              <div class="products-card-actions">
+                <a class="btn btn-primary mb-2" href="/products/iv-geojson/">Детальніше</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">ДСТУ 8855:2019</p>
+              <h2 class="products-card-title">Розрахунок класу наслідків</h2>
+              <p class="products-card-text">Вебкалькулятор з покроковим журналом дій і експортом звітів у PDF/DOCX для подальшої роботи.</p>
+              <div class="products-card-actions">
+                <a class="btn btn-primary mb-2" href="/products/consequence-class/">Детальніше</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">AI Assistant</p>
+              <h2 class="products-card-title">DBN Assistant</h2>
+              <p class="products-card-text">ШІ-асистенти на базі MyGPT/OpenAI для первинного аналізу норм із підтримкою UA/EN.</p>
+              <div class="products-card-actions d-flex flex-wrap">
+                <a class="btn btn-primary mr-2 mb-2" href="/products/dbn-assistant/">Детальніше</a>
+                <a class="btn btn-outline-primary mb-2" href="/#assistants">До асистентів</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">Залізобетон</p>
+              <h2 class="products-card-title">ArmCon</h2>
+              <p class="products-card-text">Розрахунок армування залізобетонних конструкцій за Єврокодами та українськими нормами.</p>
+              <div class="products-card-actions">
+                <a class="btn btn-primary mb-2" href="/products/armcon/">Детальніше</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="products-grid-card">
+              <p class="products-card-tag">Конструктив</p>
+              <h2 class="products-card-title">LiveBeamCalculator</h2>
+              <p class="products-card-text">Онлайн-калькулятор балок для розрахунку згинальних моментів, поперечних сил та прогинів.</p>
+              <div class="products-card-actions">
+                <a class="btn btn-primary mb-2" href="/products/livebeamcalculator/">Детальніше</a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">NormControl</h5>
-            <p class="card-text text-muted">Перевірка чинності нормативів у PDF + експорт CSV/JSON + тарифи через Patreon (Free/Standard/Pro).</p>
-            <a class="btn btn-primary" href="/products/normcontrol/">Детальніше</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">IV GeoJSON</h5>
-            <p class="card-text text-muted">DXF → GeoJSON із прив’язкою до карти для GIS/державних сервісів (контури + опорні точки).</p>
-            <a class="btn btn-primary" href="/products/iv-geojson/">Детальніше</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">IVSoft: Розрахунок класу наслідків</h5>
-            <p class="card-text text-muted">ДСТУ 8855:2019, покроковий журнал дій, експорт PDF/DOCX.</p>
-            <a class="btn btn-primary" href="/products/consequence-class/">Детальніше</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">DBN Assistant</h5>
-            <p class="card-text text-muted">ШІ-асистенти/агенти на базі MyGPT/OpenAI для аналізу норм. Двомовність.</p>
-            <div class="d-flex flex-wrap">
-              <a class="btn btn-primary mr-2 mb-2" href="/products/dbn-assistant/">Детальніше</a>
-              <a class="btn btn-outline-primary mb-2" href="/#assistants">До асистентів</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">ArmCon</h5>
-            <p class="card-text text-muted">Розрахунок армування залізобетонних конструкцій за Єврокодами та українськими нормами.</p>
-            <a class="btn btn-primary" href="/products/armcon/">Детальніше</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">LiveBeamCalculator</h5>
-            <p class="card-text text-muted">Онлайн-калькулятор балок: розрахунок згинальних моментів, поперечних сил та прогинів у реальному часі.</p>
-            <a class="btn btn-primary" href="/products/livebeamcalculator/">Детальніше</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer>

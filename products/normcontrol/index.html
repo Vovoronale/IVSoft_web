@@ -47,42 +47,167 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <a href="/products/" class="text-muted">&larr; Назад до продуктів</a>
-    <h1 class="mt-3 mb-2">NormControl</h1>
-    <p class="lead text-muted">Вебсервіс автоматизованої перевірки чинності нормативів у проєктній документації.</p>
-
-    <div class="row">
-      <div class="col-lg-9">
-        <h2 class="h4 mt-4">Робочий сценарій</h2>
-        <ol>
-          <li><strong>Завантаження PDF</strong> з проєктною документацією або витягами з посиланнями на нормативи.</li>
-          <li><strong>Перевірка</strong> чинності/актуальності згаданих нормативів.</li>
-          <li><strong>Експорт результатів</strong> у CSV/JSON для подальшої обробки.</li>
-        </ol>
-
-        <h2 class="h4 mt-4">Статуси в результатах</h2>
-        <ul>
-          <li><strong>Чинний</strong> — норматив актуальний на момент перевірки.</li>
-          <li><strong>Втратив чинність / скасований</strong> — потребує заміни або уточнення.</li>
-          <li><strong>Замінено</strong> — є вказівка на новий документ/редакцію.</li>
-          <li><strong>Не ідентифіковано</strong> — документ у PDF розпізнано неоднозначно і потребує ручної перевірки.</li>
-        </ul>
-
-        <h2 class="h4 mt-4">Підписки та тарифи (Patreon)</h2>
-        <p>Підписки оформлюються через Patreon. Доступні рівні: <strong>Free</strong>, <strong>Standard</strong>, <strong>Pro</strong>.</p>
-        <p>Для підписників <strong>CadEE.pro Standard</strong> включено.</p>
-
-        <div class="d-flex flex-wrap mt-3">
-          <a class="btn btn-primary mr-2 mb-2" href="https://nc.dbnassistant.com/" target="_blank" rel="noopener">Відкрити сервіс</a>
-          <a class="btn btn-outline-primary mb-2" href="/#support">Підтримати</a>
+  <main class="normcontrol-page">
+    <section class="normcontrol-hero">
+      <div class="container">
+        <a href="/products/" class="normcontrol-back">&larr; Назад до продуктів</a>
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <p class="normcontrol-kicker">NormControl</p>
+            <h1 class="normcontrol-title">Контроль нормативів у PDF без надлишкової ручної перевірки</h1>
+            <p class="normcontrol-lead">Вебсервіс автоматизованої перевірки чинності нормативів у проєктній документації з експортом результатів у CSV/JSON.</p>
+            <div class="normcontrol-actions">
+              <a class="btn btn-primary mr-2 mb-2" href="https://nc.dbnassistant.com/" target="_blank" rel="noopener">Відкрити сервіс</a>
+              <a class="btn btn-outline-primary mb-2" href="/#support">Підтримати проєкт</a>
+            </div>
+          </div>
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <article class="normcontrol-highlight-card">
+              <h2 class="h5 mb-3">Що отримуєте після перевірки</h2>
+              <ul class="normcontrol-checklist">
+                <li>Розбір посилань на нормативи прямо з PDF.</li>
+                <li>Статуси актуальності з поясненнями для кожного запису.</li>
+                <li>Готовий експорт CSV/JSON для подальшої обробки.</li>
+              </ul>
+            </article>
+          </div>
         </div>
+        <div class="row normcontrol-metrics">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="normcontrol-metric-card">
+              <p class="normcontrol-metric-value">PDF in</p>
+              <p class="normcontrol-metric-label mb-0">Завантаження документа без додаткової підготовки.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="normcontrol-metric-card">
+              <p class="normcontrol-metric-value">4 статуси</p>
+              <p class="normcontrol-metric-label mb-0">Чітка інтерпретація результату для кожного нормативу.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="normcontrol-metric-card">
+              <p class="normcontrol-metric-value">CSV / JSON</p>
+              <p class="normcontrol-metric-label mb-0">Формати для інтеграції у ваші внутрішні процеси.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="normcontrol-section">
+      <div class="container">
+        <div class="normcontrol-section-header">
+          <h2 class="normcontrol-section-title">Як це працює</h2>
+          <p class="text-muted mb-0">Логіка сервісу зведена до трьох кроків, щоб зменшити ручну перевірку і прискорити рішення.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <article class="normcontrol-flow-card">
+              <span class="normcontrol-flow-index">01</span>
+              <h3 class="h5">Завантаження PDF</h3>
+              <p class="text-muted mb-0">Додаєте проєктну документацію або витяги з посиланнями на нормативи.</p>
+            </article>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <article class="normcontrol-flow-card">
+              <span class="normcontrol-flow-index">02</span>
+              <h3 class="h5">Автоперевірка</h3>
+              <p class="text-muted mb-0">Сервіс визначає актуальність згаданих нормативів та готує результати.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="normcontrol-flow-card">
+              <span class="normcontrol-flow-index">03</span>
+              <h3 class="h5">Експорт</h3>
+              <p class="text-muted mb-0">Вивантажуєте звіт у CSV/JSON і передаєте його в робочий контур.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="normcontrol-section normcontrol-section-alt">
+      <div class="container">
+        <div class="normcontrol-section-header">
+          <h2 class="normcontrol-section-title">Статуси в результатах</h2>
+          <p class="text-muted mb-0">Кожен знайдений документ отримує категорію, яка підказує подальшу дію.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+            <article class="normcontrol-status-card normcontrol-status-active">
+              <h3 class="h6">Чинний</h3>
+              <p class="mb-0">Норматив актуальний на момент перевірки.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+            <article class="normcontrol-status-card normcontrol-status-obsolete">
+              <h3 class="h6">Втратив чинність</h3>
+              <p class="mb-0">Потребує заміни або додаткового уточнення.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+            <article class="normcontrol-status-card normcontrol-status-replaced">
+              <h3 class="h6">Замінено</h3>
+              <p class="mb-0">Є вказівка на новий документ або редакцію.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="normcontrol-status-card normcontrol-status-unknown">
+              <h3 class="h6">Не ідентифіковано</h3>
+              <p class="mb-0">Потрібна ручна перевірка через неоднозначність у PDF.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="normcontrol-section">
+      <div class="container">
+        <div class="normcontrol-section-header">
+          <h2 class="normcontrol-section-title">Підписки через Patreon</h2>
+          <p class="text-muted mb-0">Доступні рівні: Free, Standard, Pro. Для підписників CadEE.pro рівень Standard включено.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <article class="normcontrol-tier-card">
+              <p class="normcontrol-tier-name">Free</p>
+              <p class="normcontrol-tier-desc mb-0">Ознайомчий доступ і базовий сценарій перевірки.</p>
+            </article>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <article class="normcontrol-tier-card normcontrol-tier-featured">
+              <p class="normcontrol-tier-badge">Оптимально</p>
+              <p class="normcontrol-tier-name">Standard</p>
+              <p class="normcontrol-tier-desc mb-0">Регулярна робота з документацією та розширена цінність для команд.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="normcontrol-tier-card">
+              <p class="normcontrol-tier-name">Pro</p>
+              <p class="normcontrol-tier-desc mb-0">Максимальний рівень доступу для інтенсивного використання.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="normcontrol-cta">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="normcontrol-cta-title">Працюйте з нормативами швидше і впевненіше</h2>
+            <p class="mb-0 text-muted">NormControl зменшує рутинну перевірку і допомагає швидко побачити ризикові місця в документації.</p>
+          </div>
+          <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+            <a class="btn btn-primary" href="https://nc.dbnassistant.com/" target="_blank" rel="noopener">Запустити перевірку</a>
+          </div>
+        </div>
         <div class="legal-note mt-4">
           <strong>Юридичний дисклеймер:</strong> результати мають довідковий характер. Перевіряйте результати перед використанням у проєктній документації та/або подачею в експертизу.
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
