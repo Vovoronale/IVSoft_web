@@ -101,7 +101,7 @@ const blogArticles = [
 const researchArticles = [
   {
     id: 'research2024',
-    year: { uk: '2024 (ймовірно)', en: '2024 (probable)' },
+    year: { uk: '2024', en: '2024' },
     title: {
       uk: "Удосконалення методики задавання варіантів топології стрижневих металевих конструкцій для задач структурно-параметричної оптимізації",
       en: "Improvement of methodology for specifying topology variants of steel bar structures for structural-parametric optimization"
@@ -169,6 +169,30 @@ const researchArticles = [
     directUrl: "https://donnasa.ru/publish_house/journals/mk/2013-3/03_Peleshko_Ivaneiko.pdf",
     searchQuery: "Про один спосіб задавання варіантів топології стрижневих металевих конструкцій",
     gaEventBase: "research_2013_topology_variants"
+  },
+  {
+    id: 'research2013_ena_length',
+    year: { uk: '2013', en: '2013' },
+    title: {
+      uk: "Визначення розрахункової довжини стрижня з пружним закріпленням кінців",
+      en: "Determination of reduced length of a bar with elastically fixed ends"
+    },
+    summary: {
+      uk: "Розглянуто рівняння стійкості стисненого стрижня з пружним закріпленням кінців для визначення коефіцієнта розрахункової довжини.",
+      en: "Presents a stability equation for a compressed bar with elastic end restraints to compute the reduced-length coefficient."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко",
+      en: "I.D. Peleshko"
+    },
+    source: {
+      uk: "Електронний архів НУ \"Львівська політехніка\" (ENA LPNU)",
+      en: "Lviv Polytechnic National University Repository (ENA LPNU)"
+    },
+    directUrl: "https://ena.lpnu.ua/items/6f75e7c3-b970-4d11-ad7d-e65de7259d6b",
+    pdfUrl: "https://ena.lpnu.ua/bitstreams/c83fc9b8-4b20-4675-93e0-fc090420095f/download",
+    searchQuery: "Визначення розрахункової довжини стрижня з пружним закріпленням кінців",
+    gaEventBase: "research_2013_ena_reduced_length"
   },
   {
     id: 'research2013_odaba_harmony',
