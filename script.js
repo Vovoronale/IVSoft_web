@@ -4,7 +4,8 @@ const sectionsConfig = [
   { id: 'products', order: 2, visible: true },
   { id: 'assistants', order: 3, visible: true },
   { id: 'blog', order: 4, visible: true },
-  { id: 'contact', order: 5, visible: true }
+  { id: 'articles', order: 5, visible: true },
+  { id: 'contact', order: 6, visible: true }
 ];
 
 // Дані для асистентів із додатковим полем для GA event
@@ -97,6 +98,169 @@ const blogArticles = [
   }
 ];
 
+const researchArticles = [
+  {
+    id: 'research2024',
+    year: { uk: '2024 (ймовірно)', en: '2024 (probable)' },
+    title: {
+      uk: "Удосконалення методики задавання варіантів топології стрижневих металевих конструкцій для задач структурно-параметричної оптимізації",
+      en: "Improvement of methodology for specifying topology variants of steel bar structures for structural-parametric optimization"
+    },
+    summary: {
+      uk: "Оновлена методика задавання варіантів топології для задач структурно-параметричної оптимізації в середовищі OptCAD.",
+      en: "An updated topology-variant specification approach for structural-parametric optimization tasks in OptCAD."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко, В.В. Юрченко",
+      en: "I.D. Peleshko, V.V. Yurchenko"
+    },
+    source: {
+      uk: "BudRes (сторінка статті + PDF)",
+      en: "BudRes (article page + PDF)"
+    },
+    directUrl: "https://budres.org/index.php/budres/article/view/589",
+    pdfUrl: "https://budres.org/index.php/budres/article/download/589/596",
+    searchQuery: "Удосконалення методики задавання варіантів топології стрижневих металевих конструкцій",
+    gaEventBase: "research_2024_methodology"
+  },
+  {
+    id: 'research2013_nuwm',
+    year: { uk: '2013', en: '2013' },
+    title: {
+      uk: "Змінні проектування для формулювання задач оптимізації топології стрижневих конструкцій",
+      en: "Design variables for formulating topology optimization problems of bar structures"
+    },
+    summary: {
+      uk: "Описано підхід до формування змінних проектування в задачах топологічної оптимізації стрижневих систем.",
+      en: "Describes a design-variable formulation for topology optimization of bar systems."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко, В.В. Юрченко",
+      en: "I.D. Peleshko, V.V. Yurchenko"
+    },
+    source: {
+      uk: "Вісник НУВГП, №3(63)",
+      en: "NUWM Bulletin, No. 3(63)"
+    },
+    directUrl: "https://ep3.nuwm.edu.ua/3151/",
+    pdfUrl: "https://ep3.nuwm.edu.ua/3151/1/Vt6344.pdf",
+    searchQuery: "Змінні проектування для формулювання задач оптимізації топології стрижневих конструкцій",
+    gaEventBase: "research_2013_design_variables"
+  },
+  {
+    id: 'research2013_donnasa',
+    year: { uk: '2013', en: '2013' },
+    title: {
+      uk: "Про один спосіб задавання варіантів топології стрижневих металевих конструкцій для задач структурно-параметричної оптимізації",
+      en: "On one way of specifying topology variants of steel bar structures for structural-parametric optimization"
+    },
+    summary: {
+      uk: "Запропоновано спосіб параметризації топології стрижневих систем для розв'язання оптимізаційних задач.",
+      en: "Proposes a topology parameterization method for solving structural optimization problems."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко",
+      en: "I.D. Peleshko"
+    },
+    source: {
+      uk: "Металеві конструкції, т. 19, №3",
+      en: "Metal Constructions, Vol. 19, No. 3"
+    },
+    directUrl: "https://donnasa.ru/publish_house/journals/mk/2013-3/03_Peleshko_Ivaneiko.pdf",
+    searchQuery: "Про один спосіб задавання варіантів топології стрижневих металевих конструкцій",
+    gaEventBase: "research_2013_topology_variants"
+  },
+  {
+    id: 'research2013_odaba_harmony',
+    year: { uk: '2013', en: '2013' },
+    title: {
+      uk: "Дослідження ефективності методу пошуку гармонії для оптимального проектування стрижневих металевих конструкцій",
+      en: "Study of harmony search method efficiency for optimal design of steel bar structures"
+    },
+    summary: {
+      uk: "Дослідження ефективності методу пошуку гармонії для задач оптимального проєктування сталевих стрижневих конструкцій.",
+      en: "Evaluates the harmony search method for optimal design tasks of steel bar structures."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко",
+      en: "I.D. Peleshko"
+    },
+    source: {
+      uk: "Вісник ОДАБА, №51",
+      en: "ODABA Bulletin, No. 51"
+    },
+    searchQuery: "Дослідження ефективності методу пошуку гармонії для оптимального проектування стрижневих металевих конструкцій",
+    gaEventBase: "research_2013_harmony_efficiency"
+  },
+  {
+    id: 'research2012_harmony',
+    year: { uk: '2012', en: '2012' },
+    title: {
+      uk: "Ефективність застосування методу пошуку гармонії для розв'язування задач оптимізації металевих конструкцій",
+      en: "Efficiency of harmony search method for optimization of steel structures"
+    },
+    summary: {
+      uk: "Показано застосування методу пошуку гармонії для оптимізації металевих конструкцій та задач у середовищі OptCAD.",
+      en: "Demonstrates harmony search for steel-structure optimization tasks in OptCAD."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко, М.В. Гоголь",
+      en: "I.D. Peleshko, M.V. Hohol"
+    },
+    source: {
+      uk: "Збірник УІСК ім. В.М. Шимановського, вип. 10",
+      en: "Proceedings of V.M. Shymanovsky Ukrainian Institute of Steel Structures, Issue 10"
+    },
+    directUrl: "https://urdisc.com.ua/media/10'2012.pdf",
+    searchQuery: "Ефективність застосування методу пошуку гармонії для розв'язування задач оптимізації металевих конструкцій",
+    gaEventBase: "research_2012_harmony_method"
+  },
+  {
+    id: 'research2012_joint_test',
+    year: { uk: '2012', en: '2012' },
+    title: {
+      uk: "Випробування стику балки із сталевих тонкостінних профілів",
+      en: "Testing of a beam joint made of thin-walled steel profiles"
+    },
+    summary: {
+      uk: "Експериментальне дослідження роботи стику балки з тонкостінних сталевих профілів.",
+      en: "Experimental study of a beam-joint behavior using thin-walled steel profiles."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко, Б.Г. Демчина, М.В. Черевко, Я.П. Дуда",
+      en: "I.D. Peleshko, B.H. Demchyna, M.V. Cherevko, Ya.P. Duda"
+    },
+    source: {
+      uk: "Вісник ОДАБА, вип. 47(1)",
+      en: "ODABA Bulletin, Issue 47(1)"
+    },
+    searchQuery: "Випробування стику балки із сталевих тонкостінних профілів",
+    gaEventBase: "research_2012_beam_joint"
+  },
+  {
+    id: 'research2011_review',
+    year: { uk: '2011', en: '2011' },
+    title: {
+      uk: "Огляд сучасних методів оптимізації будівельних конструкцій",
+      en: "Review of modern optimization methods for building structures"
+    },
+    summary: {
+      uk: "Оглядовий матеріал про актуальні підходи до оптимізації будівельних конструкцій.",
+      en: "A review paper on modern approaches to optimization of building structures."
+    },
+    coauthors: {
+      uk: "І.Д. Пелешко",
+      en: "I.D. Peleshko"
+    },
+    source: {
+      uk: "Матеріали GAC-2011",
+      en: "GAC-2011 conference proceedings"
+    },
+    searchQuery: "Огляд сучасних методів оптимізації будівельних конструкцій",
+    gaEventBase: "research_2011_review_methods"
+  }
+];
+
 document.addEventListener('DOMContentLoaded', function() {
   let currentLang = 'uk';
 
@@ -139,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navHome: "Головна",
       navAbout: "Про мене",
       navProducts: "Продукти",
+      navArticles: "Статті",
       navAssistants: "Асистенти",
       navBlog: "Блог",
       navContact: "Контакти",
@@ -187,6 +352,15 @@ document.addEventListener('DOMContentLoaded', function() {
       // Blog
       blogTitle: "Блог",
       blogReadMore: "Читати далі",
+      articlesTitle: "Мої статті",
+      articlesSubtitle: "Наукові публікації авторства або співавторства. Для позицій без відкритого PDF доступні пошукові посилання.",
+      articlesOpen: "Відкрити статтю",
+      articlesOpenPdf: "PDF",
+      articlesSearchScholar: "Пошук у Scholar",
+      articlesSearchGoogle: "Пошук у Google",
+      articlesYearLabel: "Рік",
+      articlesCoauthorsLabel: "Співавтори",
+      articlesSourceLabel: "Джерело",
 
       // Contact
       contactTitle: "Контакти",
@@ -200,6 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navHome: "Home",
       navAbout: "About",
       navProducts: "Products",
+      navArticles: "Articles",
       navAssistants: "Assistants",
       navBlog: "Blog",
       navContact: "Contact",
@@ -248,6 +423,15 @@ document.addEventListener('DOMContentLoaded', function() {
       // Blog
       blogTitle: "Blog",
       blogReadMore: "Read More",
+      articlesTitle: "My Articles",
+      articlesSubtitle: "Research publications authored or co-authored by me. For items without open PDFs, search links are provided.",
+      articlesOpen: "Open Article",
+      articlesOpenPdf: "PDF",
+      articlesSearchScholar: "Search in Scholar",
+      articlesSearchGoogle: "Search in Google",
+      articlesYearLabel: "Year",
+      articlesCoauthorsLabel: "Co-authors",
+      articlesSourceLabel: "Source",
 
       // Contact
       contactTitle: "Contact",
@@ -290,6 +474,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     renderAssistants();
     renderBlogArticles();
+    renderResearchArticles();
     // Re-trigger reveal for dynamically rendered containers
     refreshReveal();
   }
@@ -389,6 +574,105 @@ function renderBlogArticles() {
     cardDiv.appendChild(cardBody);
     colDiv.appendChild(cardDiv);
     container.appendChild(colDiv);
+  });
+}
+
+function getArticleSearchUrls(searchQuery) {
+  const encodedQuery = encodeURIComponent(searchQuery);
+  return {
+    scholarUrl: `https://scholar.google.com/scholar?q=${encodedQuery}`,
+    googleUrl: `https://www.google.com/search?q=${encodedQuery}`
+  };
+}
+
+function renderResearchArticles() {
+  const container = document.getElementById('articles-container');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  researchArticles.forEach(function(article) {
+    const card = document.createElement('article');
+    card.className = 'article-card';
+
+    const header = document.createElement('div');
+    header.className = 'd-flex justify-content-between align-items-start flex-wrap mb-2';
+
+    const title = document.createElement('h5');
+    title.className = 'mb-2 mb-sm-0';
+    title.innerHTML = article.title[currentLang];
+
+    const yearBadge = document.createElement('span');
+    yearBadge.className = 'article-year-badge';
+    yearBadge.innerHTML = `${translations[currentLang]['articlesYearLabel']}: ${article.year[currentLang]}`;
+
+    header.appendChild(title);
+    header.appendChild(yearBadge);
+
+    const summary = document.createElement('p');
+    summary.className = 'article-summary';
+    summary.innerHTML = article.summary[currentLang];
+
+    const coauthors = document.createElement('p');
+    coauthors.className = 'article-meta-row';
+    coauthors.innerHTML = `<strong>${translations[currentLang]['articlesCoauthorsLabel']}:</strong> ${article.coauthors[currentLang]}`;
+
+    const source = document.createElement('p');
+    source.className = 'article-meta-row';
+    source.innerHTML = `<strong>${translations[currentLang]['articlesSourceLabel']}:</strong> ${article.source[currentLang]}`;
+
+    const actions = document.createElement('div');
+    actions.className = 'article-actions';
+
+    if (article.directUrl) {
+      const openLink = document.createElement('a');
+      openLink.href = article.directUrl;
+      openLink.target = '_blank';
+      openLink.rel = 'noopener';
+      openLink.className = 'btn btn-primary ga-link';
+      openLink.setAttribute('data-ga-event', `${article.gaEventBase}_open`);
+      openLink.innerHTML = translations[currentLang]['articlesOpen'];
+      actions.appendChild(openLink);
+
+      if (article.pdfUrl && article.pdfUrl !== article.directUrl) {
+        const pdfLink = document.createElement('a');
+        pdfLink.href = article.pdfUrl;
+        pdfLink.target = '_blank';
+        pdfLink.rel = 'noopener';
+        pdfLink.className = 'btn btn-outline-primary ga-link';
+        pdfLink.setAttribute('data-ga-event', `${article.gaEventBase}_pdf`);
+        pdfLink.innerHTML = translations[currentLang]['articlesOpenPdf'];
+        actions.appendChild(pdfLink);
+      }
+    } else {
+      const searchUrls = getArticleSearchUrls(article.searchQuery);
+
+      const scholarLink = document.createElement('a');
+      scholarLink.href = searchUrls.scholarUrl;
+      scholarLink.target = '_blank';
+      scholarLink.rel = 'noopener';
+      scholarLink.className = 'btn btn-outline-primary ga-link';
+      scholarLink.setAttribute('data-ga-event', `${article.gaEventBase}_scholar`);
+      scholarLink.innerHTML = translations[currentLang]['articlesSearchScholar'];
+      actions.appendChild(scholarLink);
+
+      const googleLink = document.createElement('a');
+      googleLink.href = searchUrls.googleUrl;
+      googleLink.target = '_blank';
+      googleLink.rel = 'noopener';
+      googleLink.className = 'btn btn-outline-primary ga-link';
+      googleLink.setAttribute('data-ga-event', `${article.gaEventBase}_google`);
+      googleLink.innerHTML = translations[currentLang]['articlesSearchGoogle'];
+      actions.appendChild(googleLink);
+    }
+
+    card.appendChild(header);
+    card.appendChild(summary);
+    card.appendChild(coauthors);
+    card.appendChild(source);
+    card.appendChild(actions);
+
+    container.appendChild(card);
   });
 }
 
